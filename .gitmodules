@@ -91,9 +91,6 @@
 [submodule "vim/bundle/wiki"]
 	path = vim/bundle/wiki
 	url = git://github.com/vim-scripts/vimwiki.git
-[submodule "vim/bundle/phpcomplete"]
-	path = vim/bundle/phpcomplete
-	url = git://github.com/shawncplus/phpcomplete.vim
 [submodule "vim/bundle/ruby-refactoring"]
 	path = vim/bundle/ruby-refactoring
 	url = git://github.com/ecomba/vim-ruby-refactoring.git
@@ -124,9 +121,6 @@
 [submodule "mutt/solarized"]
 	path = mutt/solarized
 	url = git://github.com/altercation/mutt-colors-solarized.git
-[submodule "vim/bundle/php"]
-	path = vim/bundle/php
-	url = git://github.com/StanAngeloff/php.vim.git
 [submodule "vim/bundle/ri"]
 	path = vim/bundle/ri
 	url = git://github.com/danchoi/ri.vim.git
@@ -145,3 +139,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "vim/bundle/piv"]
+	path = vim/bundle/piv
+	url = git://github.com/spf13/PIV.git

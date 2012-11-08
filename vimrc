@@ -223,10 +223,10 @@ imap <c-l> <space>=><space>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Open files with <leader>f
-map <leader>f :ClearCtrlPCache<cr>\|:CtrlPMixed<cr>
-" map <leader>b :CtrlPBuffer<cr>
-map <leader>b :BuffergatorOpen<cr>
+map <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
 map <leader>r :CtrlPMRU<cr>
+map <leader>b :CtrlPBuffer<cr>
+map <leader>B :BuffergatorOpen<cr>
 " Open files, limited to the directory of the current file, with <leader>gf
 " This requires the %% mapping found below.
 map <leader>gf :ClearCtrlPCache<cr>\|:CtrlP %%<cr>

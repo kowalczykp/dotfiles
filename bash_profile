@@ -1,3 +1,7 @@
+if command -v keychain >/dev/null 2>&1; then
+  keychain
+fi
+
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi

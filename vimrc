@@ -402,7 +402,7 @@ set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 " Turn off toolbar and menu
 set guioptions-=T
 set guioptions-=m
-set t_Co=256
+set t_Co=16
 
 " If need be use this
 if has('gui_running')
@@ -443,9 +443,9 @@ nnoremap - :Switch<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
+let g:solarized_termcolors=16
+" let g:solarized_contrast="high"
+" let g:solarized_visibility="high"
 colorscheme solarized
 
 " colorscheme peaksea

@@ -283,7 +283,10 @@ let g:vroom_map_keys = 0
 silent! map <unique> <Leader>t :VroomRunTestFile<CR>
 silent! map <unique> <Leader>T :VroomRunNearestTest<CR>
 
+" retag the current zend project
 silent! map <leader>q :!ctags --extra=+f --exclude=.git --tag-relative --exclude=log -R application library<cr>
+
+" beautify php
 silent! map <leader>p :% ! php_beautifier -s2 -l "IndentStyles(style=allman) ArrayNested() Lowercase() NewLines(before=T_CLASS:T_PUBLIC:T_PRIVATE:T_PROTECTED)"<CR>
 
 " set winwidth=100
@@ -299,20 +302,14 @@ silent! map <leader>p :% ! php_beautifier -s2 -l "IndentStyles(style=allman) Arr
 
 " The following will make tabs and trailing
 " spaces visible when requested
-"set listchars=tab:>-,trail:·,eol:$
-"nmap <silent> <leader>s :set nolist!<cr>
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<cr>
 
 " fold html tag
 "nnoremap <leader>ft Vatzf
 
 " double j for escape
 "inoremap jj <ESC>
-
-" reselect the text that was just pasted
-"nnoremap <leader>v V`]
-
-" w!! lets you write with sudo, even after loading the file
-"cmap w!! w !sudo tee % >/dev/null
 
 " use tab to move around brackets
 "nnoremap <tab> %
@@ -448,9 +445,6 @@ let g:solarized_termcolors=16
 " let g:solarized_visibility="high"
 colorscheme solarized
 
-" colorscheme peaksea
-" colorscheme vividchalk
-" colorscheme codeschool
 " If need be use this
 if has('gui_running')
 else

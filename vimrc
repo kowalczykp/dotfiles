@@ -413,6 +413,7 @@ end
 " map for ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack 
+
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': ['ruby', 'php'],
@@ -433,7 +434,6 @@ let g:Powerline_symbols = 'unicode'
 "let g:Powerline_cache_enabled = 0
 let g:Powerline_theme="skwp"
 let g:Powerline_colorscheme="skwp"
-"let g:Powerline_symbols = 'fancy'
 
 " this is for the switch plugin
 nnoremap - :Switch<cr>

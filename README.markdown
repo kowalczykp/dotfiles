@@ -9,6 +9,10 @@ different sources and customised to my own tastes.
 1) git clone into home directory
 2) cd dotfiles
 3) git submodule init
+
+You might want to be selective which submodules you update, theres quite
+a few now and some may not be required.
+
 4) git submodule update
 5) ./install.sh
 
@@ -17,11 +21,10 @@ file, delete them first.
 
 ## Install in OSX
 
-Some of the bash settings (globstar 
+Some of the bash settings have issues so there is a temporary branch for macs.
 
 6) Install homebrew
 7) brew install bash
 8) add /usr/local/bin/bash to /etc/shells
 9) move /usr/local/bin to the top of /etc/paths
 10) chsh -s /usr/local/bin/bash $USER
-

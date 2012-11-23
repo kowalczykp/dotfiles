@@ -154,3 +154,6 @@
 [submodule "solarized/tmux-colors-solarized"]
 	path = solarized/tmux-colors-solarized
 	url = https://github.com/seebi/tmux-colors-solarized.git
+[submodule "wemux"]
+	path = wemux
+	url = git://github.com/zolrath/wemux.git

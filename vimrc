@@ -395,14 +395,14 @@ endif
 
 set background=dark
 set encoding=utf-8
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
-" Turn off toolbar and menu
-set guioptions-=T
-set guioptions-=m
 set t_Co=16
 
 " If need be use this
 if has('gui_running')
+  set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
+  " Turn off toolbar and menu
+  set guioptions-=T
+  set guioptions-=m
 else
 end
 
@@ -412,7 +412,7 @@ end
 
 " map for ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': ['ruby', 'php'],

@@ -142,3 +142,15 @@
 [submodule "vim/bundle/piv"]
 	path = vim/bundle/piv
 	url = git://github.com/spf13/PIV.git
+[submodule "password-store"]
+	path = password-store
+	url = http://git.zx2c4.com/password-store
+[submodule "solarized/dircolors-solarized"]
+	path = solarized/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized
+[submodule "solarized/gnome-terminal-colors-solarized"]
+	path = solarized/gnome-terminal-colors-solarized
+	url = https://github.com/sigurdga/gnome-terminal-colors-solarized
+[submodule "solarized/tmux-colors-solarized"]
+	path = solarized/tmux-colors-solarized
+	url = https://github.com/seebi/tmux-colors-solarized.git

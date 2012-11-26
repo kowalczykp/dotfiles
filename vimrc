@@ -448,11 +448,6 @@ let g:solarized_termcolors=16
 " let g:solarized_visibility="high"
 colorscheme solarized
 
-" If need be use this
-if has('gui_running')
-else
-end
-
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif

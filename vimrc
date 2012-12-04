@@ -432,7 +432,7 @@ let g:slime_target = "tmux"
 call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 let g:Powerline_symbols = 'unicode'
 "let g:Powerline_cache_enabled = 0
-let g:Powerline_theme="skwp"
+" let g:Powerline_theme="skwp"
 let g:Powerline_colorscheme="skwp"
 
 " this is for the switch plugin

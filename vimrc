@@ -166,10 +166,6 @@ nmap <leader>w :w!<cr>
 " clear search buffer when hitting return
 nnoremap <leader><space> :nohlsearch<cr>
 
-" Very magic regexes in searches
-nnoremap / /\v
-vnoremap / /\v
-
 " dont use cursor keys!
 nnoremap <up> <nop>
 nnoremap <down> <nop>

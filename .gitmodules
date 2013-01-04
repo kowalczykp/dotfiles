@@ -118,9 +118,6 @@
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized
-[submodule "mutt/solarized"]
-	path = mutt/solarized
-	url = git://github.com/altercation/mutt-colors-solarized.git
 [submodule "vim/bundle/ri"]
 	path = vim/bundle/ri
 	url = git://github.com/danchoi/ri.vim.git

@@ -265,6 +265,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.scss.erb setfiletype scss.eruby
     autocmd BufNewFile,BufRead *.js.erb setfiletype javascript.eruby
     autocmd BufNewFile,BufRead *.coffee.erb setfiletype coffeescript.eruby
+    autocmd BufNewFile,BufRead *.html.erb setfiletype html.eruby
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " PHP

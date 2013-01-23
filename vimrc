@@ -48,7 +48,7 @@ set number
 " if there is a capital letter in the search
 " expression. *-style searches continue to
 " be consistently case-sensitive.
-" set ignorecase
+set ignorecase
 " set gdefault
 
 set cursorline

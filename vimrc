@@ -332,6 +332,9 @@ call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme="skwp"
 
+" PIV disable php folding
+let g:DisableAutoPHPFolding = 1
+
 " this is for the switch plugin
 nnoremap - :Switch<cr>
 

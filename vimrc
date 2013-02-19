@@ -63,10 +63,10 @@ set nowb
 set hidden
 
 " defaults
-" set tabstop=2
-" set expandtab
-" set shiftwidth=2
-" set softtabstop=2
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftround

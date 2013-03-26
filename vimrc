@@ -170,6 +170,7 @@ nnoremap <leader>RI :call ri#OpenSearchPrompt(1)<cr> " vertical split
 nnoremap <leader>RK :call ri#LookupNameUnderCursor()<cr> " keyword lookup
 
 " Rails specific
+map <leader>ga :ClearCtrlPCache<cr>\|:CtrlP app<cr>
 map <leader>gv :ClearCtrlPCache<cr>\|:CtrlP app/views<cr>
 map <leader>gc :ClearCtrlPCache<cr>\|:CtrlP app/controllers<cr>
 map <leader>gm :ClearCtrlPCache<cr>\|:CtrlP app/models<cr>
@@ -319,8 +320,8 @@ let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'passive_filetypes': [] }
 
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  'tmp\|\.git$\|system$',
-      \ 'file': '\.jpg$\|\.png$\|\.gif$',
+      \ 'dir':  'tmp\|\.git$\|system\|images\|uploads$',
+      \ 'file': '\.jpg$\|\.pdf$\|\.png$\|\.gif$',
       \ }
 
 let g:buffergator_suppress_keymaps = 1

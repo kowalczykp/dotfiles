@@ -11,6 +11,10 @@ source ~/.bash/completions
 source ~/.bash/colours
 source ~/.bash/config
 
+if [ -f ~/.bash/liquidprompt/liquidprompt ]; then
+  source ~/.bash/liquidprompt/liquidprompt
+fi
+
 if [ -f ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark ]; then
   eval `dircolors ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark`
 fi

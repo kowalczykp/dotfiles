@@ -169,3 +169,15 @@
 [submodule "bash/liquidprompt"]
 	path = bash/liquidprompt
 	url = git://github.com/nojhan/liquidprompt.git
+[submodule "vim/bundle/vim-fireplace"]
+	path = vim/bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "vim/bundle/vim-classpath"]
+	path = vim/bundle/vim-classpath
+	url = git://github.com/tpope/vim-classpath.git
+[submodule "vim/bundle/vim-clojure-static"]
+	path = vim/bundle/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static.git
+[submodule "vim/bundle/vim-tbone"]
+	path = vim/bundle/vim-tbone
+	url = git://github.com/tpope/vim-tbone.git

@@ -166,3 +166,6 @@
 [submodule "vim/bundle/vim-golang"]
 	path = vim/bundle/vim-golang
 	url = git://github.com/jnwhiteh/vim-golang.git
+[submodule "bash/liquidprompt"]
+	path = bash/liquidprompt
+	url = git://github.com/nojhan/liquidprompt.git

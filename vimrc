@@ -268,10 +268,8 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.coffee.erb setfiletype coffeescript.eruby
     autocmd BufNewFile,BufRead *.html.erb setfiletype html.eruby
 
-    autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd Filetype go setlocal ts=2 sts=2 sw=2 noexpandtab
+    autocmd BufNewFile,BufRead *.ruby,*.html,*.css,*.js setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " PHP

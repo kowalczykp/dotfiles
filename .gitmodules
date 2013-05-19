@@ -181,3 +181,6 @@
 [submodule "vim/bundle/vim-tbone"]
 	path = vim/bundle/vim-tbone
 	url = git://github.com/tpope/vim-tbone.git
+[submodule "vim/bundle/covim"]
+	path = vim/bundle/covim
+	url = git://github.com/FredKSchott/CoVim.git

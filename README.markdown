@@ -27,7 +27,6 @@ My .localrc file is:
       . $(brew --prefix)/etc/bash_completion
     fi
     if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-    source /usr/local/git/contrib/completion/git-completion.bash
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
     export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
     export PATH="/usr/local/sbin:$PATH"

@@ -21,10 +21,12 @@ file, delete them first.
 
 ## Install in OSX
 
-Some of the bash settings have issues so there is a temporary branch for macs.
+My .localrc file is:
 
-6) Install homebrew
-7) brew install bash
-8) add /usr/local/bin/bash to /etc/shells
-9) move /usr/local/bin to the top of /etc/paths
-10) chsh -s /usr/local/bin/bash $USER
+    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+    source /usr/local/git/contrib/completion/git-completion.bash
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    export PATH="/usr/local/sbin:$PATH"
+
+There are lots of homebrew packages set up in there.

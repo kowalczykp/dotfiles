@@ -139,9 +139,6 @@
 [submodule "vim/bundle/piv"]
 	path = vim/bundle/piv
 	url = git://github.com/spf13/PIV.git
-[submodule "password-store"]
-	path = password-store
-	url = http://git.zx2c4.com/password-store
 [submodule "solarized/dircolors-solarized"]
 	path = solarized/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized

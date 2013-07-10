@@ -230,6 +230,7 @@ vnoremap <F1> <ESC>
 
 nnoremap <leader>q gqip
 nmap <leader>m :%!markdown --html4tags <cr>
+vmap <leader>m :!markdown --html4tags <cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unused mappings ATM

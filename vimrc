@@ -218,7 +218,7 @@ silent! map <unique> <Leader>t :VroomRunTestFile<CR>
 silent! map <unique> <Leader>T :VroomRunNearestTest<CR>
 
 " retag the current zend project
-silent! map <leader>q :!ctags --extra=+f --exclude=.git --tag-relative --exclude=log -R application library<cr>
+silent! map <leader>z :!ctags --extra=+f --exclude=.git --tag-relative --exclude=log -R application library<cr>
 
 " beautify php
 silent! map <leader>p :% ! php_beautifier -s2 -l "IndentStyles(style=allman) ArrayNested() Lowercase() NewLines(before=T_CLASS:T_PUBLIC:T_PRIVATE:T_PROTECTED)"<CR>
@@ -227,6 +227,9 @@ silent! map <leader>p :% ! php_beautifier -s2 -l "IndentStyles(style=allman) Arr
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
+nnoremap <leader>q gqip
+nmap <leader>m :%!markdown --html4tags <cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unused mappings ATM

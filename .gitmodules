@@ -178,6 +178,3 @@
 [submodule "vim/bundle/ag"]
 	path = vim/bundle/ag
 	url = git://github.com/rking/ag.vim.git
-[submodule "vim/bundle/vimsh"]
-	path = vim/bundle/vimsh
-	url = git@github.com:vim-scripts/vimsh.git

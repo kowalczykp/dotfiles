@@ -217,11 +217,7 @@ let g:vroom_map_keys = 0
 silent! map <unique> <Leader>t :VroomRunTestFile<CR>
 silent! map <unique> <Leader>T :VroomRunNearestTest<CR>
 
-" retag the current zend project
-silent! map <leader>z :!ctags --extra=+f --exclude=.git --tag-relative --exclude=log -R application library<cr>
-
-" beautify php
-silent! map <leader>p :% ! php_beautifier -s2 -l "IndentStyles(style=allman) ArrayNested() Lowercase() NewLines(before=T_CLASS:T_PUBLIC:T_PRIVATE:T_PROTECTED)"<CR>
+nnoremap <leader>p :set paste!<cr>
 
 " avoid pressing F1
 inoremap <F1> <ESC>

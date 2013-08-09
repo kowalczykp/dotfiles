@@ -333,7 +333,7 @@ let g:vroom_detect_spec_helper = 1
 let g:slime_target = "tmux"
 
 " add trailing white space indicator to power line
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+" call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme="skwp"
 

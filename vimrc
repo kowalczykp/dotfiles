@@ -320,13 +320,7 @@ let g:ctrlp_custom_ignore = {
 let g:buffergator_suppress_keymaps = 1
 let g:vroom_detect_spec_helper = 1
 let g:slime_target = "tmux"
-
-let g:airline_enable_branch=1
-let g:airline_branch_empty_message=''
-let g:airline_enable_syntastic=1
-let g:airline_detect_paste=1
 let g:airline_detect_whitespace=2 "icon only
-let g:airline_theme='dark'
 
 " this is for the switch plugin
 nnoremap - :Switch<cr>

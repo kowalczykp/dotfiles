@@ -1,6 +1,6 @@
 # my dotfiles do not include a .profile
 # but it is executed here, so check it doesnt do stuff you dont want
-if [ -r ~/.profile ]; then 
+if [ -r ~/.profile ]; then
   source ~/.profile
 fi
 
@@ -13,6 +13,3 @@ fi
 if command -v keychain >/dev/null 2>&1; then
   keychain
 fi
-
-export GOPATH=$HOME/gocode
-export PATH=$PATH:$HOME/gocode/bin

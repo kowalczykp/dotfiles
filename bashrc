@@ -8,7 +8,6 @@ fi
 
 source ~/.bash/aliases
 source ~/.bash/completions
-source ~/.bash/colours
 source ~/.bash/config
 
 if [ -f ~/.bash/liquidprompt/liquidprompt ]; then

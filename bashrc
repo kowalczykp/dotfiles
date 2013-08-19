@@ -18,3 +18,4 @@ if [ -f ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark ]; then
   eval `dircolors ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark`
 fi
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

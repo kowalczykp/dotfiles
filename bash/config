@@ -30,6 +30,7 @@ shopt -s globstar
 shopt -s checkjobs
 shopt -s cmdhist
 shopt -s extglob
+shopt -s autocd
 
 # search for dirs in home
 export CDPATH=.:~

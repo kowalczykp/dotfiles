@@ -1,12 +1,9 @@
 # misc
 alias reload='. ~/.bash_profile'
 
-# cd
-alias ..='cd ..'
-
 # ls
 alias ls="ls --color=auto -F"
-alias l="ls --color=auto -lAh"
+#alias l="ls --color=auto -lAh"
 
 alias ll="ls --color=auto -lh"
 alias la='ls --color=auto -Ah'
@@ -14,14 +11,7 @@ alias la='ls --color=auto -Ah'
 command -v ack >/dev/null 2>&1 || { alias ack="ack-grep"; }
 alias ed='ed -p "ed> "'
 
-# some sillyness from the interweb
-alias rmatrix='echo -ne "\e[31m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
-alias gmatrix='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
-
 # git
-alias g='git'
-# Autocomplete for 'g' as well
-complete -o default -o nospace -F _git g
 #alias gl='git pull'
 #alias gp='git push'
 #alias gd='git diff'

@@ -121,6 +121,9 @@ nnoremap <down> <nop>
 " Close all the buffers
 map <leader>ba :1,300 bd!<cr>
 
+" Regenerate ctags
+map <leader>c :! ctags --tag-relative -R --exclude=.git --languages=-javascript,sql<cr>
+
 " Use the arrows to something usefull
 nnoremap <right> :bn<cr>
 nnoremap <left> :bp<cr>

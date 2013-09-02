@@ -47,3 +47,11 @@ function decom () {
   fi
 }
 
+tmux_pwd () {
+  [ -z "${TMUX}" ] && return
+  TARGET=\-t$(tmux display-message -p "#S")
+  tmux set-window-option ${TARGET} default-path $PWD > /dev/null
+  (( sleep 300;
+  tmux set-window-option ${TARGET} default-path ~ > /dev/null; ) & ) > /dev/null 2>&1
+}
+alias pwd="\pwd; tmux_pwd"

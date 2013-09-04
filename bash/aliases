@@ -55,3 +55,8 @@ tmux_pwd () {
   tmux set-window-option ${TARGET} default-path ~ > /dev/null; ) & ) > /dev/null 2>&1
 }
 alias pwd="\pwd; tmux_pwd"
+
+function serve {
+  port="${1:-3000}"
+  ruby -run -e httpd . -p $port
+}

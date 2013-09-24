@@ -60,3 +60,7 @@ function serve {
   port="${1:-3000}"
   ruby -run -e httpd . -p $port
 }
+
+function speedtest {
+  wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
+}

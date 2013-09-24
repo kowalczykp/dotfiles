@@ -312,7 +312,7 @@ nnoremap <leader>a :Ag
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
-      \ 'active_filetypes': ['ruby'],
+      \ 'active_filetypes': ['ruby', 'javascript'],
       \ 'passive_filetypes': [] }
 
 let g:ctrlp_custom_ignore = {

@@ -307,8 +307,9 @@ set t_Co=16
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " map for ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>A :Ack
-nnoremap <leader>a :Ag
+nnoremap <leader>A :Ack 
+nnoremap <leader>a :Ag 
+nnoremap <leader>aa :Ggrep 
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',

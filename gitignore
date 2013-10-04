@@ -5,3 +5,5 @@
 .*.swp
 gems.tags
 tags
+custom_plan.rb
+zeus.json

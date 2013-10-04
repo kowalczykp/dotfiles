@@ -159,7 +159,7 @@ imap <C-r> <space>=><space>
 
 " Open files with <leader>f
 map <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
-map <leader>r :CtrlPMRU<cr>
+" map <leader>r :CtrlPMRU<cr>
 map <leader>b :CtrlPBuffer<cr>
 map <leader>B :BuffergatorOpen<cr>
 " Open files, limited to the directory of the current file, with <leader>gf
@@ -309,7 +309,7 @@ set t_Co=16
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>A :Ack 
 nnoremap <leader>a :Ag 
-nnoremap <leader>aa :Ggrep 
+nnoremap <leader>s :Ggrep 
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',

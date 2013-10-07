@@ -10,6 +10,7 @@ source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/config
 source ~/.bash/bashmarks.sh
+source ~/dotfiles/resty/resty
 
 if [ -f ~/.bash/liquidprompt/liquidprompt ]; then
   source ~/.bash/liquidprompt/liquidprompt

@@ -227,12 +227,8 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 nnoremap <leader>q gqip
-nmap <leader>m :%!markdown --html4tags <cr>
-vmap <leader>m :!markdown --html4tags <cr>
-
-autocmd FileType javascript noremap <buffer> <leader>j :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <leader>j :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <leader>j :call CSSBeautify()<cr>
+nmap <leader>m :%!kramdown --no-auto-ids<cr>
+vmap <leader>m :!kramdown --no-auto-ids<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unused mappings ATM
@@ -296,6 +292,8 @@ if has("autocmd")
     autocmd FileType css,scss silent! setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml silent! setlocal omnifunc=xmlcomplete#CompleteTags
 
+    autocmd FileType javascript nmap <leader>m :%!js-beautify -j -q -B -f -s 2 -<cr>
+    autocmd FileType javascript vmap <leader>m :!js-beautify -j -q -B -f -s 2 -<cr>
   augroup END
 endif
 

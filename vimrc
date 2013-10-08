@@ -230,6 +230,10 @@ nnoremap <leader>q gqip
 nmap <leader>m :%!markdown --html4tags <cr>
 vmap <leader>m :!markdown --html4tags <cr>
 
+autocmd FileType javascript noremap <buffer> <leader>j :call JsBeautify()<cr>
+autocmd FileType html noremap <buffer> <leader>j :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <leader>j :call CSSBeautify()<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unused mappings ATM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -315,6 +319,8 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': ['ruby', 'javascript'],
       \ 'passive_filetypes': [] }
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_check_on_open=1
 
 let g:ctrlp_custom_ignore = {
       \ 'dir':  'tmp\|\.git$\|system\|images\|uploads$',

@@ -292,8 +292,12 @@ if has("autocmd")
     autocmd FileType css,scss silent! setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml silent! setlocal omnifunc=xmlcomplete#CompleteTags
 
-    autocmd FileType javascript nmap <leader>m :%!js-beautify -j -q -B -f -s 2 -<cr>
-    autocmd FileType javascript vmap <leader>m :!js-beautify -j -q -B -f -s 2 -<cr>
+    autocmd FileType javascript nmap <leader>j :%!js-beautify --type=js -j -q -B -s 2 -f -<cr>
+    autocmd FileType javascript vmap <leader>j :!js-beautify --type=js -j -q -B -s 2 -f -<cr>
+    autocmd filetype css nmap <leader>j :%!js-beautify --type=css -j -q -B -s 2 -f -<cr>
+    autocmd filetype css vmap <leader>j :!js-beautify --type=css -j -q -B -s 2 -f -<cr>
+    autocmd filetype html nmap <leader>j :%!js-beautify --type=html -j -q -B -s 2 -f -<cr>
+    autocmd filetype html vmap <leader>j :!js-beautify --type=html -j -q -B -s 2 -f -<cr>
   augroup END
 endif
 

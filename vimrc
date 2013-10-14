@@ -230,6 +230,39 @@ nnoremap <leader>q gqip
 nmap <leader>m :%!kramdown --no-auto-ids<cr>
 vmap <leader>m :!kramdown --no-auto-ids<cr>
 
+" Compatible with ranger 1.4.2 through 1.6.*
+"
+" Add ranger as a file chooser in vim
+"
+" If you add this code to the .vimrc, ranger can be started using the command
+" ":RagerChooser" or the keybinding "<leader>r".  Once you select one or more
+" files, press enter and ranger will quit again and vim will open the selected
+" files.
+function! RangeChooser()
+    let temp = tempname()
+    " The option "--choosefiles" was added in ranger 1.5.1. Use the next line
+    " with ranger 1.4.2 through 1.5.0 instead.
+    "exec 'silent !ranger --choosefile=' . shellescape(temp)
+    exec 'silent !ranger --choosefiles=' . shellescape(temp)
+    if !filereadable(temp)
+        " Nothing to read.
+        return
+    endif
+    let names = readfile(temp)
+    if empty(names)
+        " Nothing to open.
+        return
+    endif
+    " Edit the first item.
+    exec 'edit ' . fnameescape(names[0])
+    " Add any remaning items to the arg list/buffer list.
+    for name in names[1:]
+        exec 'argadd ' . fnameescape(name)
+    endfor
+endfunction
+command! -bar RangerChooser call RangeChooser()
+nnoremap <leader>r :<C-U>RangerChooser<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unused mappings ATM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -292,12 +325,12 @@ if has("autocmd")
     autocmd FileType css,scss silent! setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml silent! setlocal omnifunc=xmlcomplete#CompleteTags
 
-    autocmd FileType javascript nmap <leader>j :%!js-beautify --type=js -j -q -B -s 2 -f -<cr>
-    autocmd FileType javascript vmap <leader>j :!js-beautify --type=js -j -q -B -s 2 -f -<cr>
-    autocmd filetype css nmap <leader>j :%!js-beautify --type=css -j -q -B -s 2 -f -<cr>
-    autocmd filetype css vmap <leader>j :!js-beautify --type=css -j -q -B -s 2 -f -<cr>
-    autocmd filetype html nmap <leader>j :%!js-beautify --type=html -j -q -B -s 2 -f -<cr>
-    autocmd filetype html vmap <leader>j :!js-beautify --type=html -j -q -B -s 2 -f -<cr>
+    autocmd FileType javascript nmap <leader>j :%!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
+    autocmd FileType javascript vmap <leader>j  :!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
+    autocmd filetype css,scss nmap <leader>j :%!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
+    autocmd filetype css,scss vmap <leader>j  :!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
+    autocmd filetype html,eruby nmap <leader>j :%!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
+    autocmd filetype html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
   augroup END
 endif
 
@@ -319,14 +352,14 @@ nnoremap <leader>s :Ggrep
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
-      \ 'active_filetypes': ['ruby', 'javascript'],
+      \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'c', 'h'],
       \ 'passive_filetypes': [] }
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_check_on_open=1
 
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  'tmp\|\.git$\|system\|images\|uploads$',
-      \ 'file': '\.jpg$\|\.pdf$\|\.png$\|\.gif$',
+      \ 'dir':  '\v[\/](\.git|\.hg|\.svn|tmp|system|images|uploads|doc/app)$',
+      \ 'file': '\v\.(pdf|jpe?g|gif|png)$',
       \ }
 
 let g:buffergator_suppress_keymaps = 1

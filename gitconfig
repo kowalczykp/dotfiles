@@ -8,12 +8,10 @@
   br = branch
   di = diff
   dc = diff --cached
-  amend = commit --ammend
+  ds = diff --staged
+  cia = commit --ammend
   aa = add --all
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%%an>%Creset' --abbrev-commit --
-  #hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  #type = cat-file -t
-  #dump = cat-file -p
+  lg = log --color --graph --oneline --all --abbrev-commit --
 [color]
   diff = auto
   status = auto

@@ -281,6 +281,8 @@ nnoremap <leader>r :<C-U>RangerChooser<CR>
 "map <leader>bd :bd<cr>
 
 if has("autocmd")
+  autocmd QuickFixCmdPost *grep* cwindow
+
   augroup vimrcEx
     autocmd!
 
@@ -346,8 +348,7 @@ set t_Co=16
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " map for ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>A :Ack 
-nnoremap <leader>a :Ag 
+nnoremap <leader>a :Ack 
 nnoremap <leader>s :Ggrep 
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'

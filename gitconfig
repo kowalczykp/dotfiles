@@ -9,10 +9,9 @@
   di = diff
   dc = diff --cached
   ds = diff --staged
-  cia = commit --ammend
-  aa = add --all
-  lg = log --color --graph --oneline --all --abbrev-commit --
+  cia = commit --amend
   g = grep --break --heading --line-number
+  mod = "!git status --porcelain | awk '{print $2}'"
 [color]
   diff = auto
   status = auto
@@ -21,7 +20,6 @@
   excludesfile = HOME/.gitignore
   autocrlf = input
   editor = vim
-  pager = less -F -X -r
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [github]
@@ -29,6 +27,5 @@
 [push]
   default = current
 [grep]
-  extendRegexp = true
-  lineNumber = true
-
+  extendregexp = true
+  linenumber = true

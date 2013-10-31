@@ -9,3 +9,6 @@ custom_plan.rb
 zeus.json
 TODO.md
 Guardfile
+.bundle
+Gemfile.local*
+tmp

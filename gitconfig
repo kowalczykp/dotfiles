@@ -6,9 +6,9 @@
   ci = commit
   st = status
   br = branch
-  di = diff
-  dc = diff --cached
-  ds = diff --staged
+  di = diff --ignore-space-at-eol -b -w --ignore-blank-lines 
+  dc = di --cached
+  ds = di --staged
   cia = commit --amend
   g = grep --break --heading --line-number
   mod = "!git status --porcelain | awk '{print $2}'"

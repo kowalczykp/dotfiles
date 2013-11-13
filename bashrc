@@ -15,6 +15,7 @@ source ~/dotfiles/resty/resty
 if [ -f ~/.bash/liquidprompt/liquidprompt ]; then
   source ~/.bash/liquidprompt/liquidprompt
 fi
+PROMPT_COMMAND="$PROMPT_COMMAND;set_bundle_gemfile"
 
 if [ -f ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark ]; then
   eval `dircolors ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark`

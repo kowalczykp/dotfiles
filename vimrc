@@ -374,7 +374,6 @@ let g:ctrlp_custom_ignore = {
       \ }
 
 let g:buffergator_suppress_keymaps = 1
-let g:vroom_detect_spec_helper = 1
 let g:slime_target = "tmux"
 let g:airline_detect_whitespace=2 "icon only
 

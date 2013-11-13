@@ -17,9 +17,16 @@ alias gs='git status'
 alias gf='git fetch -p'
 alias gr='git remote -v'
 
-
 alias be='bundle exec'
-alias bl='if [ -f Gemfile.local ]; then export BUNDLE_GEMFILE=Gemfile.local; else unset BUNDLE_GEMFILE; fi'
+alias bl='set_bundle_gemfile'
+
+set_bundle_gemfile () {
+  if [[ -f Gemfile.local ]]; then
+    export BUNDLE_GEMFILE=`readlink -m Gemfile.local`
+  else
+    unset BUNDLE_GEMFILE
+  fi
+}
 
 # Handy Extract Program
 function extract()

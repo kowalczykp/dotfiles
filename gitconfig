@@ -6,7 +6,7 @@
   ci = commit
   st = status
   br = branch
-  di = diff --ignore-space-at-eol -b -w --ignore-blank-lines 
+  di = diff --ignore-space-at-eol -b -w --ignore-blank-lines
   dc = diff --ignore-space-at-eol -b -w --ignore-blank-lines --cached
   ds = diff --ignore-space-at-eol -b -w --ignore-blank-lines --staged
   cia = commit --amend

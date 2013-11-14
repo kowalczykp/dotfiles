@@ -7,8 +7,8 @@
   st = status
   br = branch
   di = diff --ignore-space-at-eol -b -w --ignore-blank-lines 
-  dc = di --cached
-  ds = di --staged
+  dc = diff --ignore-space-at-eol -b -w --ignore-blank-lines --cached
+  ds = diff --ignore-space-at-eol -b -w --ignore-blank-lines --staged
   cia = commit --amend
   g = grep --break --heading --line-number
   mod = "!git status --porcelain | awk '{print $2}'"

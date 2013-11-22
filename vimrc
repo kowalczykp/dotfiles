@@ -147,7 +147,10 @@ nnoremap ; :
 " augroup END
 
 " map leader-W to strip white space
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+" map leader-H to convert to 1.9 hashs
+nnoremap <leader>H :%s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
 
 " insert a hash rocket with <c-l>
 imap <C-r> <space>=><space>

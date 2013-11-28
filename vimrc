@@ -1,7 +1,3 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#infect()
-" call pathogen#helptags()
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -14,6 +10,69 @@ set nocompatible
 " this is a tpope plugin for normalizing vim
 " including this here should run it before vimrc to allow overrides
 " runtime! plugin/sensible.vim
+
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-sleuth'
+Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-afterimage'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'tpope/vim-tbone'
+
+Bundle 'kien/ctrlp.vim'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/syntastic'
+Bundle 'skalnik/vim-vroom'
+Bundle 'mileszs/ack.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'othree/html5.vim'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/vim-handlebars'
+Bundle 'jpalardy/vim-slime'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'ciaranm/inkpot'
+Bundle 'vim-scripts/peaksea'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'danchoi/ri.vim'
+Bundle 'AndrewRadev/switch.vim'
+Bundle 'vim-scripts/DirDiff.vim'
+Bundle 'Neurogami/mirah-vim'
+Bundle 'spf13/PIV'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'guns/vim-clojure-static'
+Bundle 'bling/vim-airline'
+Bundle 'tjennings/git-grep-vim'
+Bundle 'Valloric/YouCompleteMe'
+
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General

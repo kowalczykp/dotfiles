@@ -1,6 +1,3 @@
-# misc
-alias reload='. ~/.bash_profile'
-
 # ls
 alias ls="ls --color=auto -Fh"
 alias ll="ls -lv --group-directories-first"

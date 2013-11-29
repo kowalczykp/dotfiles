@@ -7,12 +7,6 @@
 [submodule "solarized/tmux-colors-solarized"]
 	path = solarized/tmux-colors-solarized
 	url = https://github.com/seebi/tmux-colors-solarized.git
-[submodule "wemux"]
-	path = wemux
-	url = git://github.com/zolrath/wemux.git
-[submodule "bash/liquidprompt"]
-	path = bash/liquidprompt
-	url = git://github.com/nojhan/liquidprompt.git
-[submodule "resty"]
-	path = resty
-	url = https://github.com/micha/resty.git
+[submodule "liquidprompt"]
+	path = liquidprompt
+	url = https://github.com/nojhan/liquidprompt.git

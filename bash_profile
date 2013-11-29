@@ -1,19 +1,12 @@
-# my dotfiles do not include a .profile
-if [ -r ~/.profile ]; then
+# Load .profile, containing login, non-bash related initializations.
+if [ -f ~/.profile ]; then
   source ~/.profile
 fi
-
-case "$-" in *i*) if [ -r ~/.bashrc ]; then source ~/.bashrc; fi;; esac
-
-if [ -d "$HOME/bin" ] ; then
-  PATH="$HOME/bin:$PATH"
+# Load .bashrc, containing non-login related bash initializations.
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
 fi
-
-if command -v keychain >/dev/null 2>&1; then
-  keychain
+# Load .localrc, containing system specific initializations.
+if [ -f ~/.localrc ]; then
+  source ~/.localrc
 fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# this is for ansible to show running output
-export PYTHONUNBUFFERED=1

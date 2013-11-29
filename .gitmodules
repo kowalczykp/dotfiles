@@ -16,3 +16,6 @@
 [submodule "resty"]
 	path = resty
 	url = https://github.com/micha/resty.git
+[submodule "vim/bundle/vundle"]
+	path = vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git

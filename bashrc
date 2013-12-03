@@ -44,10 +44,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   source /etc/bash_completion
 fi
 
-if command -v keychain >/dev/null 2>&1; then
-  keychain
-fi
-
 if [ -f ~/dotfiles/liquidprompt/liquidprompt ]; then
   source ~/dotfiles/liquidprompt/liquidprompt
 fi

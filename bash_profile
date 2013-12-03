@@ -1,12 +1,7 @@
-# Load .localrc, containing system specific initializations.
-if [ -f ~/.localrc ]; then
-  source ~/.localrc
-fi
-# Load .profile, containing login, non-bash related initializations.
+# bash specific login shell only
+
+# the existence of this file will prevent bash from running the cross shell
+# .profile script, so source that as well
 if [ -f ~/.profile ]; then
   source ~/.profile
-fi
-# Load .bashrc, containing non-login related bash initializations.
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
 fi

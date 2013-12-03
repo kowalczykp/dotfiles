@@ -1,12 +1,16 @@
-export PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/bin" ] ; then
+  PATH="$HOME/bin:$PATH"
+fi
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# this is for ansible to show running output
-export PYTHONUNBUFFERED=1
+if [ -s "$HOME/.rvm/scripts/rvm" ] ; then
+  source "$HOME/.rvm/scripts/rvm"
+fi
 
 if command -v keychain >/dev/null 2>&1; then
   keychain
+fi
+
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
 fi
 

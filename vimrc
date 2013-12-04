@@ -17,6 +17,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+" tpope
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-eunuch'
@@ -40,37 +41,43 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'tpope/vim-tbone'
 
+" Language agnostic
 Bundle 'kien/ctrlp.vim'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
-Bundle 'skalnik/vim-vroom'
 Bundle 'mileszs/ack.vim'
-Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-textobj-user'
+Bundle 'godlygeek/tabular'
+Bundle 'jpalardy/vim-slime'
+Bundle 'AndrewRadev/switch.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'bling/vim-airline'
+Bundle 'tjennings/git-grep-vim'
+Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/DirDiff.vim'
+
+" Ruby
+Bundle 'skalnik/vim-vroom'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'danchoi/ri.vim'
+
+" Other languages
+Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'othree/html5.vim'
-Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
-Bundle 'jpalardy/vim-slime'
-Bundle 'myusuf3/numbers.vim'
+Bundle 'Neurogami/mirah-vim'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'guns/vim-clojure-static'
+
+" Colours
 Bundle 'ciaranm/inkpot'
 Bundle 'vim-scripts/peaksea'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'danchoi/ri.vim'
-Bundle 'AndrewRadev/switch.vim'
-Bundle 'vim-scripts/DirDiff.vim'
-Bundle 'Neurogami/mirah-vim'
-Bundle 'spf13/PIV'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'guns/vim-clojure-static'
-Bundle 'bling/vim-airline'
-Bundle 'tjennings/git-grep-vim'
-Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 

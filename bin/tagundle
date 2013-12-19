@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+system('bundle check || bundle')
+require 'rubygems'
+require 'bundler'
+paths = Bundler.load.specs.map(&:full_gem_path)
+system("ctags -R --tag-relative --exclude=.git --languages=-javascript,sql -f gems.tags #{paths.join(' ')}")

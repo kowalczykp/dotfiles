@@ -188,7 +188,8 @@ nnoremap <down> <nop>
 map <leader>ba :1,300 bd!<cr>
 
 " Regenerate ctags
-map <leader>c :! ctags --tag-relative -R --exclude=.git --languages=-javascript,sql<cr>
+map <leader>c :! ctags --tag-relative -R --exclude=.git --links=no --languages=-javascript,sql<cr>
+map <leader>C :! tagundle<cr>
 
 " Use the arrows to something usefull
 nnoremap <right> :bn<cr>

@@ -56,6 +56,7 @@ Bundle 'bling/vim-airline'
 Bundle 'tjennings/git-grep-vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DirDiff.vim'
+Bundle 'junegunn/goyo.vim'
 
 " Ruby
 Bundle 'skalnik/vim-vroom'
@@ -449,6 +450,21 @@ let g:airline_detect_whitespace=2 "icon only
 
 " this is for the switch plugin
 nnoremap - :Switch<cr>
+
+" Goyo
+function! s:goyo_before()
+  silent !tmux set status off
+  set noshowmode
+  set noshowcmd
+endfunction
+
+function! s:goyo_after()
+  silent !tmux set status on
+  set showmode
+  set showcmd
+endfunction
+
+let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Display after bundles

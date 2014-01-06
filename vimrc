@@ -57,6 +57,7 @@ Bundle 'tjennings/git-grep-vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'junegunn/goyo.vim'
+Bundle 'mmai/wikilink'
 
 " Ruby
 Bundle 'skalnik/vim-vroom'

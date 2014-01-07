@@ -57,7 +57,7 @@ Bundle 'tjennings/git-grep-vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'junegunn/goyo.vim'
-Bundle 'mmai/wikilink'
+" Bundle 'mmai/wikilink' this is breaking open from location list
 
 " Ruby
 Bundle 'skalnik/vim-vroom'
@@ -275,6 +275,15 @@ function! ShowRoutes()
 endfunction
 map <leader>gR :call ShowRoutes()<cr>
 
+function! EditWiki()
+  if isdirectory(expand("$HOME/wiki"))
+    if filereadable(expand("$HOME/wiki/home.md"))
+      :edit $HOME/wiki/home.md
+    endif
+  endif
+endfunction
+map <leader>gw :call EditWiki()<cr>
+
 " Edit or view files in same directory as current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
@@ -415,6 +424,7 @@ if has("autocmd")
     autocmd filetype css,scss vmap <leader>j  :!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
     autocmd filetype html,eruby nmap <leader>j :%!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd filetype html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
+    autocmd filetype ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
   augroup END
 endif
 
@@ -437,9 +447,10 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'c', 'h'],
       \ 'passive_filetypes': [] }
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint', 'jslint']
+let g:syntastic_ruby_checkers=['mri']
+let g:syntastic_aggregate_errors=1
 let g:syntastic_check_on_open=1
-
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\v[\/](\.git|\.hg|\.svn|tmp|system|images|uploads|doc/app)$',
       \ 'file': '\v\.(pdf|jpe?g|gif|png)$',

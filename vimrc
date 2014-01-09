@@ -408,6 +408,8 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.md,*.markdown,README,*.txt set spell
     autocmd BufNewFile,BufRead *.jst set syntax=eruby
     autocmd BufNewFile,BufRead *.jst.tpl set syntax=jst
+    autocmd BufRead,BufNewFile *.wisp set ft=wisp
+    autocmd FileType wisp call PareditInitBuffer()
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Omnifunc
@@ -462,6 +464,8 @@ let g:airline_detect_whitespace=2 "icon only
 
 " this is for the switch plugin
 nnoremap - :Switch<cr>
+
+let g:paredit_leader = '\'
 
 " Goyo
 function! s:goyo_before()

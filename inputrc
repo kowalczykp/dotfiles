@@ -7,3 +7,14 @@ set convert-meta off
 # mode in everything that uses readline
 set editing-mode vi
 set keymap vi
+set completion-ignore-case On
+set bell-style none
+
+$if mode=vi
+  set keymap vi-command
+  "gg": beginning-of-history
+  "G": end-of-history
+  set keymap vi-insert
+  "jj": vi-movement-mode
+  "\C-p": history-search-backward
+  "\C-l": clear-screen

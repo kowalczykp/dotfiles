@@ -120,6 +120,7 @@ set ignorecase
 " set gdefault
 
 set cursorline
+set colorcolumn=80
 " set ttyfast
 
 " no old messy files

@@ -42,7 +42,6 @@ Bundle 'tpope/vim-classpath'
 Bundle 'tpope/vim-tbone'
 
 " Language agnostic
-Bundle 'kien/ctrlp.vim'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'scrooloose/syntastic'
@@ -56,6 +55,9 @@ Bundle 'tjennings/git-grep-vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'junegunn/goyo.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'Shougo/unite.vim'
+" Bundle 'basyura/unite-rails' remove until i've used unite for a while
 " Bundle 'mmai/wikilink' this is breaking open from location list
 
 " Ruby
@@ -75,6 +77,7 @@ Bundle 'Neurogami/mirah-vim'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'guns/vim-clojure-static'
 Bundle 'guns/paredit'
+Bundle 'chrisbra/csv.vim'
 
 " Colours
 Bundle 'ciaranm/inkpot'
@@ -221,6 +224,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
 " map leader-H to convert to 1.9 hashs
 nnoremap <leader>H :%s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
+vnoremap <leader>H :'<,'>s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
 
 " insert a hash rocket with <c-l>
 imap <C-r> <space>=><space>
@@ -231,29 +235,21 @@ imap <C-r> <space>=><space>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Open files with <leader>f
-map <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
-" map <leader>r :CtrlPMRU<cr>
-map <leader>b :CtrlPBuffer<cr>
-map <leader>B :BuffergatorOpen<cr>
-" Open files, limited to the directory of the current file, with <leader>gf
-" This requires the %% mapping found below.
-map <leader>gf :ClearCtrlPCache<cr>\|:CtrlP %%<cr>
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+nnoremap <leader>f :<C-u>Unite -start-insert file_rec<cr>
+nnoremap <leader>b :<C-u>Unite -quick-match buffer<cr>
+nnoremap <leader>m :<C-u>Unite -start-insert file_mru<cr>
+let g:unite_source_history_yank_enable = 1
+nnoremap <leader>y :<C-u>Unite history/yank<cr>
+
+nnoremap <leader>B :BuffergatorOpen<cr>
 
 " ri.vim remaps
 nnoremap <leader>ri :call ri#OpenSearchPrompt(0)<cr> " horizontal split
 nnoremap <leader>RI :call ri#OpenSearchPrompt(1)<cr> " vertical split
 nnoremap <leader>RK :call ri#LookupNameUnderCursor()<cr> " keyword lookup
 
-" Rails specific
-map <leader>ga :ClearCtrlPCache<cr>\|:CtrlP app<cr>
-map <leader>gv :ClearCtrlPCache<cr>\|:CtrlP app/views<cr>
-map <leader>gc :ClearCtrlPCache<cr>\|:CtrlP app/controllers<cr>
-map <leader>gm :ClearCtrlPCache<cr>\|:CtrlP app/models<cr>
-map <leader>gh :ClearCtrlPCache<cr>\|:CtrlP app/helpers<cr>
-map <leader>gl :ClearCtrlPCache<cr>\|:CtrlP lib<cr>
-map <leader>gp :ClearCtrlPCache<cr>\|:CtrlP public<cr>
-map <leader>gs :ClearCtrlPCache<cr>\|:CtrlP app/assets/stylesheets<cr>
-map <leader>gj :ClearCtrlPCache<cr>\|:CtrlP app/assets/javascripts<cr>
 map <leader>gr :e config/routes.rb<cr>
 map <leader>gg :e Gemfile<cr>
 
@@ -445,6 +441,7 @@ set t_Co=16
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <leader>a :Ack 
 nnoremap <leader>s :GitGrep 
+nnoremap <leader>v :TagbarToggle<cr>
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
@@ -454,10 +451,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_ruby_checkers=['mri']
 let g:syntastic_aggregate_errors=1
 let g:syntastic_check_on_open=1
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/](\.git|\.hg|\.svn|tmp|system|images|uploads|doc/app)$',
-      \ 'file': '\v\.(pdf|jpe?g|gif|png)$',
-      \ }
 
 let g:buffergator_suppress_keymaps = 1
 let g:slime_target = "tmux"

@@ -174,9 +174,6 @@ set textwidth=80
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
-" Fast saving
-nmap <leader>w :w!<cr>
-
 " clear search buffer when hitting return
 " this is mapped to ctrl l in sensible
 " but is is a good key to use for something
@@ -189,13 +186,6 @@ nnoremap <down> <nop>
 "inoremap <down> <nop>
 "inoremap <left> <nop>
 "inoremap <right> <nop>
-
-" Close all the buffers
-map <leader>ba :1,300 bd!<cr>
-
-" Regenerate ctags
-map <leader>c :! ctags --tag-relative -R --exclude=.git --links=no --languages=-javascript,sql<cr>
-map <leader>C :! tagundle<cr>
 
 " Use the arrows to something usefull
 nnoremap <right> :bn<cr>
@@ -219,6 +209,31 @@ nnoremap ; :
 "   autocmd BufEnter * match OverLength /\%80v.*/
 " augroup END
 
+" insert a hash rocket with <c-l>
+imap <C-r> <space>=><space>
+
+" Edit or view files in same directory as current file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" avoid pressing F1
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Leader mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Close all the buffers
+map <leader>ba :1,300 bd!<cr>
+
+" Regenerate ctags
+map <leader>c :! ctags --tag-relative -R --exclude=.git --links=no --languages=-javascript,sql<cr>
+map <leader>C :! tagundle<cr>
+
 " map leader-W to strip white space
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
@@ -226,20 +241,12 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 nnoremap <leader>H :%s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
 vnoremap <leader>H :'<,'>s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
 
-" insert a hash rocket with <c-l>
-imap <C-r> <space>=><space>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Mappings
-" https://destroyallsoftware.com/file-navigation-in-vim.html
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Open files with <leader>f
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 nnoremap <leader>f :<C-u>Unite -start-insert file_rec<cr>
 nnoremap <leader>b :<C-u>Unite -quick-match buffer<cr>
-nnoremap <leader>m :<C-u>Unite -start-insert file_mru<cr>
+" nnoremap <leader>m :<C-u>Unite -start-insert file_mru<cr>
 let g:unite_source_history_yank_enable = 1
 nnoremap <leader>y :<C-u>Unite history/yank<cr>
 
@@ -281,8 +288,6 @@ function! EditWiki()
 endfunction
 map <leader>gw :call EditWiki()<cr>
 
-" Edit or view files in same directory as current file
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 " map <leader>v :view %%
 
@@ -298,11 +303,6 @@ silent! map <unique> <Leader>t :VroomRunTestFile<CR>
 silent! map <unique> <Leader>T :VroomRunNearestTest<CR>
 
 nnoremap <leader>p :set paste!<cr>
-
-" avoid pressing F1
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
 
 nnoremap <leader>q gqip
 nmap <leader>m :%!kramdown --no-auto-ids<cr>

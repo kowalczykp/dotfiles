@@ -239,7 +239,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
 " map leader-H to convert to 1.9 hashs
 nnoremap <leader>H :%s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
-vnoremap <leader>H :'<,'>s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
+vnoremap <leader>H :s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
 
 " Open files with <leader>f
 call unite#filters#matcher_default#use(['matcher_fuzzy'])

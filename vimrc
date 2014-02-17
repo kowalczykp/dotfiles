@@ -68,6 +68,7 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'danchoi/ri.vim'
 
 " Other languages
+Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'othree/html5.vim'
@@ -251,6 +252,7 @@ call unite#custom_source('file_rec,file_mru,file,buffer,grep',
       \ 'shared/',
       \ 'assets/',
       \ 'bin/',
+      \ 'node_modules',
       \ ], '\|'))
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])

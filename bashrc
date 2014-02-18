@@ -31,8 +31,12 @@ shopt -s autocd
 # search for dirs in home
 export CDPATH=.:~
 
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-  source /etc/bash_completion
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    source /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion
+  fi
 fi
 
 if [ -f ~/dotfiles/liquidprompt/liquidprompt ]; then
@@ -50,8 +54,4 @@ fi
 
 if [ -f ~/dotfiles/bashmarks.sh ]; then
   source ~/dotfiles/bashmarks.sh
-fi
-
-if [ -f ~/dotfiles/resty/resty ]; then
-  source ~/dotfiles/resty/resty
 fi

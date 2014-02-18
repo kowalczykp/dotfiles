@@ -40,5 +40,3 @@ else
   sed "s/NAME/$name/g" $DIR/gitconfig | sed "s/EMAIL/$email/g" | sed "s/GITHUB/$github/g" | sed "s/HOME/$home/g" > $HOME/.gitconfig
   echo ".gitconfig installed"
 fi
-
-vim +BundleInstall +qall

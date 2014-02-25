@@ -1,7 +1,7 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-for file in vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore tmx zephyros.rb inputrc psqlrc
+for file in vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore tmx zephyros.rb inputrc psqlrc jshintrc
 do
   if [ -a $HOME/.${file} ]
   then echo ".$file found, doing nothing"

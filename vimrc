@@ -315,8 +315,8 @@ nnoremap <leader><leader> <c-^>
 
 " Run this file
 let g:vroom_map_keys = 0
-silent! map <unique> <Leader>t :VroomRunTestFile<CR>
-silent! map <unique> <Leader>T :VroomRunNearestTest<CR>
+silent! map <unique> <leader>t :VroomRunTestFile<CR>
+silent! map <unique> <leader>T :VroomRunNearestTest<CR>
 
 nnoremap <leader>p :set paste!<cr>
 
@@ -432,23 +432,24 @@ if has("autocmd")
       imap <buffer> <C-k> <Plug>(unite_select_previous_line)
       nmap <buffer> <ESC> <Plug>(unite_exit)
     endfunction
-    autocmd FileType unite call s:unite_settings()
+    autocmd filetype unite call s:unite_settings()
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Omnifunc
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    autocmd FileType ruby,eruby silent! setlocal omnifunc=rubycomplete#Complete
-    autocmd FileType javascript silent! setlocal omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType html silent! setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType css,scss,less silent! setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType xml silent! setlocal omnifunc=xmlcomplete#CompleteTags
+    autocmd filetype ruby,eruby silent! setlocal omnifunc=rubycomplete#Complete
+    autocmd filetype javascript silent! setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd filetype html silent! setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd filetype css,scss,less silent! setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd filetype xml silent! setlocal omnifunc=xmlcomplete#CompleteTags
 
-    autocmd FileType javascript nmap <leader>j :%!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
-    autocmd FileType javascript vmap <leader>j  :!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
+    autocmd filetype javascript nmap <leader>j :%!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
+    autocmd filetype javascript vmap <leader>j  :!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
     autocmd filetype css,scss,less nmap <leader>j :%!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
     autocmd filetype css,scss,less vmap <leader>j  :!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
     autocmd filetype html,eruby nmap <leader>j :%!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd filetype html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd filetype ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
+    autocmd filetype go autocmd BufWritePre <buffer> Fmt
   augroup END
 endif
 
@@ -470,7 +471,7 @@ nnoremap <leader>v :TagbarToggle<cr>
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
-      \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'less', 'c', 'h'],
+      \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'less', 'c', 'h', 'go'],
       \ 'passive_filetypes': [] }
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_ruby_checkers=['mri']

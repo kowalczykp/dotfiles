@@ -9,13 +9,26 @@ do
   fi
 done
 
+echo $name
+
 # gitconfig
 if [ -a $HOME/.gitconfig ]
 then echo ".gitconfig found, doing nothing"
-else 
-  read -p "Name " name
-  read -p "Email " email
-  read -p "Github username " github
+else
+  if [[ -z "$NAME" ]]
+  then read -p "Name " name
+  else name=$NAME
+  fi
+
+  if [[ -z "$EMAIL" ]]
+  then read -p "Email " email
+  else email=$EMAIL
+  fi
+
+  if [[ -z "$GITHUB" ]]
+  then read -p "Github username " github
+  else github=$GITHUB
+  fi
 
   # escape strings for sed
   name=$(printf "%s\n" "$name" | sed 's/[\&/]/\\&/g')

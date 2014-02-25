@@ -72,6 +72,7 @@ Bundle 'danchoi/ri.vim'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'groenewege/vim-less'
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
@@ -408,7 +409,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.coffee.erb setfiletype coffeescript.eruby
     autocmd BufNewFile,BufRead *.html.erb setfiletype html.eruby
 
-    autocmd BufNewFile,BufRead *.ruby,*.html,*.css,*.js setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd BufNewFile,BufRead *.ruby,*.html,*.css,*.js,*.scss,*.less setlocal ts=2 sts=2 sw=2 expandtab
     autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -438,13 +439,13 @@ if has("autocmd")
     autocmd FileType ruby,eruby silent! setlocal omnifunc=rubycomplete#Complete
     autocmd FileType javascript silent! setlocal omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType html silent! setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType css,scss silent! setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType css,scss,less silent! setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml silent! setlocal omnifunc=xmlcomplete#CompleteTags
 
     autocmd FileType javascript nmap <leader>j :%!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
     autocmd FileType javascript vmap <leader>j  :!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
-    autocmd filetype css,scss nmap <leader>j :%!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
-    autocmd filetype css,scss vmap <leader>j  :!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
+    autocmd filetype css,scss,less nmap <leader>j :%!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
+    autocmd filetype css,scss,less vmap <leader>j  :!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
     autocmd filetype html,eruby nmap <leader>j :%!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd filetype html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd filetype ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
@@ -469,7 +470,7 @@ nnoremap <leader>v :TagbarToggle<cr>
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
-      \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'c', 'h'],
+      \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'less', 'c', 'h'],
       \ 'passive_filetypes': [] }
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_ruby_checkers=['mri']

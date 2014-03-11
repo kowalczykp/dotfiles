@@ -12,6 +12,7 @@
   cia = commit --amend
   g = grep --break --heading --line-number
   mod = "!git status --porcelain | awk '{print $2}'"
+  pom = pull origin master
 [color]
   diff = auto
   status = auto

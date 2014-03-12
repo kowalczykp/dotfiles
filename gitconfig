@@ -13,6 +13,7 @@
   g = grep --break --heading --line-number
   mod = "!git status --porcelain | awk '{print $2}'"
   up = "!git remote update -p; git merge --ff-only @{u}"
+  pom = pull origin master
 [color]
   diff = auto
   status = auto

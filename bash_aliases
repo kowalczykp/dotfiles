@@ -17,6 +17,9 @@ alias gr='git remote -v'
 alias be='bundle exec'
 alias bl='set_bundle_gemfile'
 
+alias treeless='tree -C | less -R'
+alias llless='ls -A --color=always | less -R'
+
 set_bundle_gemfile () {
   if [[ -f Gemfile.local ]]; then
     export BUNDLE_GEMFILE=`readlink -m Gemfile.local`

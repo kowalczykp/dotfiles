@@ -321,8 +321,7 @@ silent! map <unique> <leader>T :VroomRunNearestTest<CR>
 nnoremap <leader>p :set paste!<cr>
 
 nnoremap <leader>q gqip
-nmap <leader>m :%!kramdown --no-auto-ids<cr>
-vmap <leader>m :!kramdown --no-auto-ids<cr>
+nmap <leader>m :make<cr>:copen<cr>
 
 " Compatible with ranger 1.4.2 through 1.6.*
 "
@@ -408,9 +407,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.js.erb setfiletype javascript.eruby
     autocmd BufNewFile,BufRead *.coffee.erb setfiletype coffeescript.eruby
     autocmd BufNewFile,BufRead *.html.erb setfiletype html.eruby
-
     autocmd BufNewFile,BufRead *.ruby,*.html,*.css,*.js,*.scss,*.less setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Other languages
@@ -423,6 +420,12 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.jst.tpl set syntax=jst
     autocmd BufRead,BufNewFile *.wisp set ft=wisp
     autocmd FileType wisp call PareditInitBuffer()
+    autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
+    autocmd FileType go autocmd BufWritePre <buffer> Fmt
+    autocmd FileType go set makeprg=go\ build\ ./...
+
+    autocmd FileType markdown nmap <leader>m :%!kramdown --no-auto-ids<cr>
+    autocmd FileType markdown vmap <leader>m :!kramdown --no-auto-ids<cr>
 
     function! s:unite_settings()
       " Play nice with supertab
@@ -432,24 +435,23 @@ if has("autocmd")
       imap <buffer> <C-k> <Plug>(unite_select_previous_line)
       nmap <buffer> <ESC> <Plug>(unite_exit)
     endfunction
-    autocmd filetype unite call s:unite_settings()
+    autocmd FileType unite call s:unite_settings()
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Omnifunc
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    autocmd filetype ruby,eruby silent! setlocal omnifunc=rubycomplete#Complete
-    autocmd filetype javascript silent! setlocal omnifunc=javascriptcomplete#CompleteJS
-    autocmd filetype html silent! setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd filetype css,scss,less silent! setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd filetype xml silent! setlocal omnifunc=xmlcomplete#CompleteTags
+    autocmd FileType ruby,eruby silent! setlocal omnifunc=rubycomplete#Complete
+    autocmd FileType javascript silent! setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType html silent! setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css,scss,less silent! setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType xml silent! setlocal omnifunc=xmlcomplete#CompleteTags
 
-    autocmd filetype javascript nmap <leader>j :%!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
-    autocmd filetype javascript vmap <leader>j  :!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
-    autocmd filetype css,scss,less nmap <leader>j :%!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
-    autocmd filetype css,scss,less vmap <leader>j  :!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
-    autocmd filetype html,eruby nmap <leader>j :%!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
-    autocmd filetype html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
-    autocmd filetype ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
-    autocmd filetype go autocmd BufWritePre <buffer> Fmt
+    autocmd FileType javascript nmap <leader>j :%!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
+    autocmd FileType javascript vmap <leader>j  :!js-beautify --type=js -j -p -q -B -s 2 -f -<cr>
+    autocmd FileType css,scss,less nmap <leader>j :%!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
+    autocmd FileType css,scss,less vmap <leader>j  :!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
+    autocmd FileType html,eruby nmap <leader>j :%!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
+    autocmd FileType html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
+    autocmd FileType ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
   augroup END
 endif
 

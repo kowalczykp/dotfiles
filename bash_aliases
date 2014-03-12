@@ -11,7 +11,7 @@ alias gg='git'
 complete -o default -o nospace -F _git gg
 alias gb='git branch -avv'
 alias gs='git status'
-alias gf='git fetch -p'
+alias gf='git fetch -p --all'
 alias gr='git remote -v'
 
 alias be='bundle exec'

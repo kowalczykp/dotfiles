@@ -9,7 +9,7 @@
   g = grep --break --heading --line-number
 
   co = checkout
-  bm = branch --merged
+  bm = branch -avv --merged
   bl = blame -MCw
   ci = commit
   di = diff --ignore-space-at-eol -b -w --ignore-blank-lines --word-diff

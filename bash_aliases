@@ -9,10 +9,10 @@ alias ed='ed -p "ed> "'
 # git
 alias gg='git'
 complete -o default -o nospace -F _git gg
-alias gb='git branch -avv'
-alias gs='git status'
-alias gf='git fetch -p --all'
-alias gr='git remote -v'
+alias gb='git b'
+alias gs='git s'
+alias gf='git f'
+alias gr='git r'
 
 alias be='bundle exec'
 alias bl='set_bundle_gemfile'

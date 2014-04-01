@@ -5,7 +5,6 @@ alias la='ll -A'
 
 command -v ack >/dev/null 2>&1 || { alias ack="ack-grep"; }
 alias ed='ed -p "ed> "'
-alias -='cd -'
 alias cd..='cd ..'
 
 # git

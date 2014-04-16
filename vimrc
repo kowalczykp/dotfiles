@@ -81,6 +81,7 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'guns/vim-clojure-static'
 Bundle 'guns/paredit'
 Bundle 'chrisbra/csv.vim'
+Bundle 'dag/vim2hs.git'
 
 " Colours
 Bundle 'ciaranm/inkpot'

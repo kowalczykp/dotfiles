@@ -27,7 +27,6 @@ Bundle 'tpope/vim-afterimage'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
@@ -77,11 +76,13 @@ Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
 Bundle 'Neurogami/mirah-vim'
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'fatih/vim-go'
 Bundle 'guns/vim-clojure-static'
 Bundle 'guns/paredit'
 Bundle 'chrisbra/csv.vim'
 Bundle 'dag/vim2hs.git'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'vim-pandoc/vim-pandoc'
 
 " Colours
 Bundle 'ciaranm/inkpot'
@@ -421,9 +422,9 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.jst.tpl set syntax=jst
     autocmd BufRead,BufNewFile *.wisp set ft=wisp
     autocmd FileType wisp call PareditInitBuffer()
-    autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
-    autocmd FileType go autocmd BufWritePre <buffer> Fmt
-    autocmd FileType go set makeprg=go\ build\ ./...
+    " autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
+    " autocmd FileType go autocmd BufWritePre <buffer> Fmt
+    " autocmd FileType go set makeprg=go\ build\ ./...
 
     autocmd FileType markdown nmap <leader>m :%!kramdown --no-auto-ids<cr>
     autocmd FileType markdown vmap <leader>m :!kramdown --no-auto-ids<cr>

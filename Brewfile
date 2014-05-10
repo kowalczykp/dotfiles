@@ -28,8 +28,9 @@ install automake
 install pkg-config
 install readline
 install valgrind
+# install gcc49
 
-install haskell-platform
+install haskell-platform --cc=/usr/local/bin/gcc-4.8
 install chruby
 install ruby-install
 install chicken

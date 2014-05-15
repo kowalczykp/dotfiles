@@ -70,5 +70,6 @@ install libdvdcss
 install dos2unix
 install cowsay
 install nmap
+install archey
 
 cleanup

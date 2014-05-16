@@ -242,8 +242,12 @@ map <leader>C :! tagundle<cr>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
 " map leader-H to convert to 1.9 hashs
-nnoremap <leader>H :%s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
-vnoremap <leader>H :s/:\(\w*\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
+nnoremap <leader>H :%s/:\(\w\+\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
+vnoremap <leader>H :s/:\(\w\+\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
+
+" map leader-H to convert to 1.8 hashs
+nnoremap <leader>G :%s/\(\w\+\):\(\s\+\)/:\1 => /gc<cr>
+vnoremap <leader>G :s/\(\w\+\):\(\s\+\)/:\1 => /gc<cr>
 
 " Open files with <leader>f
 let g:unite_source_history_yank_enable = 1

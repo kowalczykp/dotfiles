@@ -27,7 +27,6 @@ Bundle 'tpope/vim-afterimage'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
@@ -76,12 +75,15 @@ Bundle 'groenewege/vim-less'
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
-Bundle 'Neurogami/mirah-vim'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'guns/vim-clojure-static'
-Bundle 'guns/paredit'
+" Bundle 'Neurogami/mirah-vim'
+" Bundle 'fatih/vim-go'
+" Bundle 'guns/vim-clojure-static'
+" Bundle 'guns/paredit'
+" Bundle 'bitc/vim-hdevtools'
 Bundle 'chrisbra/csv.vim'
 Bundle 'dag/vim2hs.git'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'vim-pandoc/vim-pandoc'
 
 " Colours
 Bundle 'ciaranm/inkpot'
@@ -425,9 +427,9 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.jst.tpl set syntax=jst
     autocmd BufRead,BufNewFile *.wisp set ft=wisp
     autocmd FileType wisp call PareditInitBuffer()
-    autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
-    autocmd FileType go autocmd BufWritePre <buffer> Fmt
-    autocmd FileType go set makeprg=go\ build\ ./...
+    " autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
+    " autocmd FileType go autocmd BufWritePre <buffer> Fmt
+    " autocmd FileType go set makeprg=go\ build\ ./...
 
     autocmd FileType markdown nmap <leader>m :%!kramdown --no-auto-ids<cr>
     autocmd FileType markdown vmap <leader>m :!kramdown --no-auto-ids<cr>
@@ -457,6 +459,10 @@ if has("autocmd")
     autocmd FileType html,eruby nmap <leader>j :%!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd FileType html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd FileType ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
+
+    autocmd FileType haskell set makeprg=go\ build\ ./...
+    autocmd FileType haskell nnoremap <buffer> <leader>j :HdevtoolsType<cr>
+    autocmd FileType haskell nnoremap <buffer> <silent> <leader>l :HdevtoolsClear<cr>
   augroup END
 endif
 
@@ -478,7 +484,7 @@ nnoremap <leader>v :TagbarToggle<cr>
 
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'passive',
-      \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'less', 'c', 'h', 'go'],
+      \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'less', 'c', 'h', 'go', 'haskell'],
       \ 'passive_filetypes': [] }
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_ruby_checkers=['mri']

@@ -5,7 +5,7 @@ Some of the vimrc settings require vim 7.3 or greater.
 ## Install
 
     cd ~
-    git clone
+    git clone https://github.com/hatoishi/dotfiles.git
     cd dotfiles
     git submodule --init update
     ./install.sh

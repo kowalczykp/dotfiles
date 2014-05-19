@@ -460,7 +460,6 @@ if has("autocmd")
     autocmd FileType html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd FileType ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
 
-    autocmd FileType haskell set makeprg=go\ build\ ./...
     autocmd FileType haskell nnoremap <buffer> <leader>j :HdevtoolsType<cr>
     autocmd FileType haskell nnoremap <buffer> <silent> <leader>l :HdevtoolsClear<cr>
   augroup END

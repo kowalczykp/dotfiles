@@ -28,7 +28,8 @@ install automake
 install pkg-config
 install readline
 install valgrind
-# install gcc49
+install gcc48
+install gcc49
 
 install haskell-platform --cc=/usr/local/bin/gcc-4.8
 install chruby

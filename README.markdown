@@ -1,20 +1,14 @@
-My dotfiles.
-
-Vimrc using pathogen and git submodules manage vim plugins.
+My dotfiles for Vim, Git and Bash and more ...
 
 Some of the vimrc settings require vim 7.3 or greater.
 
 ## Install
 
-1. git clone into home directory
-2. cd dotfiles
-3. git submodule init
-
-You might want to be selective which submodules you update, there is quite
-a few now and some may not be required.
-
-4. git submodule update
-5. ./install.sh
+    cd ~
+    git clone https://github.com/hatoishi/dotfiles.git
+    cd dotfiles
+    git submodule --init update
+    ./install.sh
 
 The install script is not destructive so if you want to replace the original
 files, delete them first.

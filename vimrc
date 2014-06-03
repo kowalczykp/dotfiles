@@ -427,9 +427,10 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.jst.tpl set syntax=jst
     autocmd BufRead,BufNewFile *.wisp set ft=wisp
     autocmd FileType wisp call PareditInitBuffer()
-    " autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
-    " autocmd FileType go autocmd BufWritePre <buffer> Fmt
-    " autocmd FileType go set makeprg=go\ build\ ./...
+    autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
+    autocmd FileType go autocmd BufWritePre <buffer> Fmt
+    autocmd FileType go set makeprg=go\ build\ ./...
+    autocmd BufNewFile,BufRead *.hs setlocal ts=2 sts=2 sw=2 expandtab
 
     autocmd FileType markdown nmap <leader>m :%!kramdown --no-auto-ids<cr>
     autocmd FileType markdown vmap <leader>m :!kramdown --no-auto-ids<cr>
@@ -460,8 +461,7 @@ if has("autocmd")
     autocmd FileType html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd FileType ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
 
-    autocmd FileType haskell nnoremap <buffer> <leader>j :HdevtoolsType<cr>
-    autocmd FileType haskell nnoremap <buffer> <silent> <leader>l :HdevtoolsClear<cr>
+    autocmd FileType haskell nnoremap <buffer> <leader>j :%!stylish-haskell<cr>
   augroup END
 endif
 

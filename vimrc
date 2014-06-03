@@ -247,7 +247,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 nnoremap <leader>H :%s/:\(\w\+\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
 vnoremap <leader>H :s/:\(\w\+\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
 
-" map leader-H to convert to 1.8 hashs
+" map leader-G to convert to 1.8 hashs
 nnoremap <leader>G :%s/\(\w\+\):\(\s\+\)/:\1 => /gc<cr>
 vnoremap <leader>G :s/\(\w\+\):\(\s\+\)/:\1 => /gc<cr>
 

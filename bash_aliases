@@ -17,6 +17,7 @@ alias gr='git r'
 
 alias be='bundle exec'
 alias bl='set_bundle_gemfile'
+alias mrake='reattach-to-user-namespace -l rake'
 
 alias treeless='tree -C | less -R'
 alias llless='ls -A --color=always | less -R'

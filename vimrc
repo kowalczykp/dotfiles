@@ -57,6 +57,7 @@ Bundle 'junegunn/goyo.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'Shougo/unite.vim'
 Bundle 'schickling/vim-bufonly'
+Bundle 'kana/vim-textobj-indent'
 " Bundle 'basyura/unite-rails' remove until i've used unite for a while
 " Bundle 'mmai/wikilink' this is breaking open from location list
 

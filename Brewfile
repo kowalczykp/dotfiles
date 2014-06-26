@@ -11,14 +11,14 @@ install git
 install git-extras
 install git-sh
 
-install mongodb
-install mysql
-install redis
-install sqlite
-install haproxy
-install nginx
-install nodejs
-install postgresql
+# install mongodb
+# install mysql
+# install redis
+# install sqlite
+# install haproxy
+# install nginx
+# install nodejs
+# install postgresql
 
 install libtool
 install libyaml
@@ -28,8 +28,8 @@ install automake
 install pkg-config
 install readline
 install valgrind
-install gcc48
-install gcc49
+# install gcc48
+# install gcc49
 
 install haskell-platform --cc=/usr/local/bin/gcc-4.8
 install chruby
@@ -50,7 +50,7 @@ install htop
 # install pass
 install s3cmd
 install fdupes
-install the_silver_searcher
+# install the_silver_searcher
 install watch
 install openssl
 install markdown
@@ -72,5 +72,22 @@ install dos2unix
 install cowsay
 install nmap
 install archey
+install z
+
+tap caskroom/cask
+install brew-cask
+
+# Virtualization
+#cask install vagrant
+#cask install virtualbox
+
+# Applications
+#cask install git-annex
+#cask install google-chrome
+#cask install iterm2
+#cask install skype
+#cask install sequel-pro
+#cask install vlc
+cask install disk-inventory-x
 
 cleanup

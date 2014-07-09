@@ -1,6 +1,6 @@
 update
 
-# upgrade
+upgrade
 
 tap homebrew/binary
 tap homebrew/versions
@@ -47,7 +47,6 @@ install ack
 install wget
 install ctags
 install htop
-# install pass
 install s3cmd
 install fdupes
 # install the_silver_searcher
@@ -61,7 +60,6 @@ install graphviz --with-pdf
 install tmux
 install reattach-to-user-namespace
 install docker
-install boot2docker
 install ranger
 install id3tool
 install imagemagick

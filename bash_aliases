@@ -6,6 +6,7 @@ alias la='ll -A'
 command -v ack >/dev/null 2>&1 || { alias ack="ack-grep"; }
 alias ed='ed -p "ed> "'
 alias cd..='cd ..'
+alias j='jobs -l'
 
 # git
 alias gg='git'

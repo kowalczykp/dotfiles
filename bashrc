@@ -55,3 +55,7 @@ fi
 if [ -f ~/dotfiles/bashmarks.sh ]; then
   source ~/dotfiles/bashmarks.sh
 fi
+
+if [ -f ~/dotfiles/z/z.sh ]; then
+  source ~/dotfiles/z/z.sh
+fi

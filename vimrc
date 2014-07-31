@@ -39,6 +39,7 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'tpope/vim-tbone'
+Bundle 'tpope/vim-dispatch'
 
 " Language agnostic
 Bundle 'myusuf3/numbers.vim'

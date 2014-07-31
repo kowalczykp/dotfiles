@@ -12,6 +12,7 @@ alias j='jobs -l'
 alias gg='git'
 complete -o default -o nospace -F _git gg
 alias gb='git b'
+alias gba='git_active'
 alias gs='git s'
 alias gf='git f'
 alias gr='git r'
@@ -22,6 +23,13 @@ alias mrake='reattach-to-user-namespace -l rake'
 
 alias treeless='tree -C | less -R'
 alias llless='ls -A --color=always | less -R'
+
+function git_active() {
+  for k in `git branch -a|sed s/^..//i | cut -d' ' -f1`
+  do
+    echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr %Cred%an%Creset" "$k" --`\\t"$k"
+  done | sort
+}
 
 set_bundle_gemfile () {
   if [[ -f Gemfile.local ]]; then

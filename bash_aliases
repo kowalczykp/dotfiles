@@ -27,7 +27,7 @@ alias llless='ls -A --color=always | less -R'
 function git_active() {
   for k in `git branch -a|sed s/^..//i | cut -d' ' -f1`
   do
-    echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr %Cred%an%Creset" "$k" --`\\t"$k"
+    echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr %Cred%an%Creset" "$k" --` "$k"
   done | sort
 }
 

@@ -48,14 +48,14 @@ if [ -f ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark ]; then
   eval `dircolors ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark`
 fi
 
-if [ -f ~/dotfiles/bash_aliases ]; then
-  source ~/dotfiles/bash_aliases
-fi
-
 if [ -f ~/dotfiles/bashmarks.sh ]; then
   source ~/dotfiles/bashmarks.sh
 fi
 
 if [ -f ~/dotfiles/z/z.sh ]; then
   source ~/dotfiles/z/z.sh
+fi
+
+if [ -f ~/dotfiles/bash_aliases ]; then
+  source ~/dotfiles/bash_aliases
 fi

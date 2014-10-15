@@ -9,8 +9,8 @@ alias cd..='cd ..'
 alias j='jobs -l'
 
 # git
-alias gg='git'
-complete -o default -o nospace -F _git gg
+alias g='git'
+complete -o default -o nospace -F _git g
 alias gb='git b'
 alias gba='git_active'
 alias gs='git s'

@@ -54,8 +54,9 @@ brew install clamav
 brew install cowsay
 brew install wakeonlan
 brew install tree
-brew install ffmpeg
+brew install ffmpeg --with-libvpx
 brew install ffmpeg2theora
+brew install libvpx
 #install ssh-copy-id
 #install s3cmd
 #install fdupes

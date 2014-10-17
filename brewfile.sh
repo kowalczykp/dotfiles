@@ -1,5 +1,5 @@
 brew update
-#brew upgrade
+brew upgrade
 
 brew tap homebrew/binary
 brew tap homebrew/versions
@@ -50,7 +50,7 @@ brew install watch
 brew install vim
 brew install tmux
 brew install ranger
-brew install clamav
+#brew install clamav
 brew install cowsay
 brew install wakeonlan
 brew install tree
@@ -76,23 +76,21 @@ brew install libvpx
 #install archey
 
 brew tap caskroom/cask
-brew install brew-cask
-
-# Virtualization
-#cask install vagrant
-#cask install virtualbox
+brew install caskroom/cask/brew-cask
 
 # Applications
+brew cask install vagrant
+brew cask install virtualbox
 #cask install adium
 #cask install git-annex
-#cask install google-chrome
-#cask install google-drive
-#cask install iterm2
-#cask install skype
-#cask install sequel-pro
-#cask install vlc
+brew cask install google-chrome
+brew cask install iterm2
+brew cask install skype
+brew cask install sequel-pro
+brew cask install vlc
+brew cask install 
+brew cask install firefox
 #cask install plex
-#cask install skype
 #cask install unison-usenet
 #cask install disk-inventory-x
 

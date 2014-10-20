@@ -88,10 +88,11 @@ brew cask install iterm2
 brew cask install skype
 brew cask install sequel-pro
 brew cask install vlc
-brew cask install 
+brew cask install flash
 brew cask install firefox
+brew cask install tunnelblick
 #cask install plex
 #cask install unison-usenet
-#cask install disk-inventory-x
+brew cask install disk-inventory-x
 
 brew cleanup

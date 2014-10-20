@@ -94,5 +94,6 @@ brew cask install tunnelblick
 #cask install plex
 #cask install unison-usenet
 brew cask install disk-inventory-x
+brew cask install bettertouchtool
 
 brew cleanup

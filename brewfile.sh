@@ -57,6 +57,7 @@ brew install tree
 brew install ffmpeg --with-libvpx
 brew install ffmpeg2theora
 brew install libvpx
+brew install ansible
 #install ssh-copy-id
 #install s3cmd
 #install fdupes

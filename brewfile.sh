@@ -16,7 +16,7 @@ brew install git-sh
 #install sqlite
 #install haproxy
 #install nginx
-#install nodejs
+brew install nodejs
 #install postgresql
 
 brew install libtool
@@ -92,7 +92,6 @@ brew cask install vlc
 brew cask install flash
 brew cask install firefox
 brew cask install tunnelblick
-brew cask install geekbench
 #cask install plex
 #cask install unison-usenet
 brew cask install disk-inventory-x

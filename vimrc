@@ -416,7 +416,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.js.erb setfiletype javascript.eruby
     autocmd BufNewFile,BufRead *.coffee.erb setfiletype coffeescript.eruby
     autocmd BufNewFile,BufRead *.html.erb setfiletype html.eruby
-    autocmd BufNewFile,BufRead *.ruby,*.html,*.css,*.js,*.scss,*.less setlocal ts=2 sts=2 sw=2 expandtab
+    " autocmd BufNewFile,BufRead *.ruby,*.html,*.css,*.js,*.scss,*.less setlocal ts=2 sts=2 sw=2 expandtab
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Other languages
@@ -429,10 +429,8 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.jst.tpl set syntax=jst
     autocmd BufRead,BufNewFile *.wisp set ft=wisp
     autocmd FileType wisp call PareditInitBuffer()
-    autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
-    autocmd FileType go autocmd BufWritePre <buffer> Fmt
-    autocmd FileType go set makeprg=go\ build\ ./...
-    autocmd BufNewFile,BufRead *.hs setlocal ts=2 sts=2 sw=2 expandtab
+    " autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
+    " autocmd BufNewFile,BufRead *.hs setlocal ts=2 sts=2 sw=2 expandtab
 
     autocmd FileType markdown nmap <leader>m :%!kramdown --no-auto-ids<cr>
     autocmd FileType markdown vmap <leader>m :!kramdown --no-auto-ids<cr>

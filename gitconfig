@@ -16,7 +16,7 @@
   dc = diff --ignore-space-at-eol -b -w --ignore-blank-lines --word-diff --cached
   ds = diff --ignore-space-at-eol -b -w --ignore-blank-lines --word-diff --staged
   up = "!git remote update -p; git merge --ff-only @{u}"
-  ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short 
+  ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
   lsv = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --numstat
 
   cia = commit --amend
@@ -24,6 +24,7 @@
   pom = pull origin master
   active = for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'
   alias = config --get-regexp alias
+  sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [color]
   diff = auto
   status = auto

@@ -28,7 +28,6 @@ brew install mercurial
 #install ssh-copy-id
 #install s3cmd
 #install fdupes
-#install openssl
 #install markdown
 #install duplicity
 #install gd
@@ -45,6 +44,8 @@ brew install mercurial
 
 brew install libtool
 brew install libyaml
+# brew install libressl
+brew install openssl
 
 brew install autoconf
 brew install automake
@@ -92,6 +93,7 @@ brew cask install vlc
 brew cask install flash
 brew cask install firefox
 brew cask install tunnelblick
+brew cask install sqlite-database-browser
 #cask install plex
 #cask install unison-usenet
 brew cask install disk-inventory-x

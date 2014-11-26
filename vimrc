@@ -340,6 +340,7 @@ nmap <leader>m :make<cr>:copen<cr>
 " ":RagerChooser" or the keybinding "<leader>r".  Once you select one or more
 " files, press enter and ranger will quit again and vim will open the selected
 " files.
+
 function! RangeChooser()
     let temp = tempname()
     " The option "--choosefiles" was added in ranger 1.5.1. Use the next line
@@ -347,11 +348,13 @@ function! RangeChooser()
     "exec 'silent !ranger --choosefile=' . shellescape(temp)
     exec 'silent !ranger --choosefiles=' . shellescape(temp)
     if !filereadable(temp)
+        redraw!
         " Nothing to read.
         return
     endif
     let names = readfile(temp)
     if empty(names)
+        redraw!
         " Nothing to open.
         return
     endif
@@ -361,6 +364,7 @@ function! RangeChooser()
     for name in names[1:]
         exec 'argadd ' . fnameescape(name)
     endfor
+    redraw!
 endfunction
 command! -bar RangerChooser call RangeChooser()
 nnoremap <leader>r :<C-U>RangerChooser<CR>

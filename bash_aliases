@@ -16,6 +16,7 @@ alias gba='git_active'
 alias gs='git s'
 alias gf='git f'
 alias gr='git r'
+alias dotgit='GIT_DIR=~/dotfiles/.git GIT_WORK_TREE=~/dotfiles git'
 
 alias be='bundle exec'
 alias bl='set_bundle_gemfile'

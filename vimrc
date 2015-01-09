@@ -107,6 +107,7 @@ set modelines=0
 
 " dont autofold on start or load
 " set foldlevelstart=99
+set nofoldenable
 
 " shows all options in edit wild mode
 set wildmode=list:longest
@@ -495,6 +496,9 @@ let g:syntastic_ruby_checkers=['mri']
 let g:syntastic_aggregate_errors=1
 let g:syntastic_check_on_open=1
 
+let g:vim_markdown_folding_disabled=1
+let g:goyo_width=85
+
 let g:buffergator_suppress_keymaps = 1
 let g:slime_target = "tmux"
 let g:airline_detect_whitespace=2 "icon only
@@ -509,12 +513,14 @@ function! s:goyo_before()
   silent !tmux set status off
   set noshowmode
   set noshowcmd
+  NumbersOnOff
 endfunction
 
 function! s:goyo_after()
   silent !tmux set status on
   set showmode
   set showcmd
+  NumbersEnable
 endfunction
 
 let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]

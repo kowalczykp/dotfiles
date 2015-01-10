@@ -72,9 +72,11 @@ brew install ranger
 brew install cowsay
 brew install wakeonlan
 brew install tree
-brew install ffmpeg --with-libvpx
-brew install ffmpeg2theora
+brew install libvorbis
 brew install libvpx
+brew install libfaac
+brew install ffmpeg --with-libvpx --with-theora --with-libvorbis --with-faac
+brew install ffmpeg2theora
 brew install ansible
 
 brew tap caskroom/cask

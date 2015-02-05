@@ -101,5 +101,6 @@ brew cask install evernote
 #cask install unison-usenet
 brew cask install disk-inventory-x
 brew cask install bettertouchtool
+brew cask install musicbrainz-picard
 
 brew cleanup

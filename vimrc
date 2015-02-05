@@ -435,6 +435,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.jst set syntax=eruby
     autocmd BufNewFile,BufRead *.jst.tpl set syntax=jst
     autocmd BufRead,BufNewFile *.wisp set ft=wisp
+    autocmd BufRead,BufNewFile *.es6 setfiletype javascript
     autocmd FileType wisp call PareditInitBuffer()
     " autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
     " autocmd BufNewFile,BufRead *.hs setlocal ts=2 sts=2 sw=2 expandtab

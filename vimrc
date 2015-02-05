@@ -264,6 +264,7 @@ call unite#custom_source('file_rec,file_mru,file,buffer,grep',
       \ 'tmp/',
       \ 'shared/',
       \ 'assets/',
+      \ 'vendor/',
       \ 'bin/',
       \ 'node_modules',
       \ ], '\|'))

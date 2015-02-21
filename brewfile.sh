@@ -23,7 +23,7 @@ brew install mercurial
 #install phantomjs
 #install gcc48
 #install gcc49
-#install haskell-platform --cc=/usr/local/bin/gcc-4.8
+brew install ghc cabal-install
 #brew install clamav
 #install ssh-copy-id
 #install s3cmd

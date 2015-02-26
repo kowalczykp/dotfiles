@@ -26,6 +26,7 @@
   active = for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'
   alias = config --get-regexp alias
   sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+  forcepull = "!git remote update -p; git reset --hard @{u}"
 [color]
   diff = auto
   status = auto

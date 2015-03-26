@@ -102,6 +102,7 @@ brew cask install evernote
 brew cask install disk-inventory-x
 brew cask install bettertouchtool
 brew cask install musicbrainz-picard
+brew cask install paparazzi
 
 brew tap neovim/homebrew-neovim
 brew install --HEAD neovim

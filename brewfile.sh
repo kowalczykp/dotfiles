@@ -103,6 +103,7 @@ brew cask install disk-inventory-x
 brew cask install bettertouchtool
 brew cask install musicbrainz-picard
 brew cask install paparazzi
+brew cask install bittorrent-sync
 
 brew tap neovim/homebrew-neovim
 brew install --HEAD neovim

@@ -78,6 +78,7 @@ brew install libfaac
 brew install ffmpeg --with-libvpx --with-theora --with-libvorbis --with-faac
 brew install ffmpeg2theora
 brew install ansible
+brew install syncthing
 
 brew tap caskroom/cask
 brew install caskroom/cask/brew-cask
@@ -103,7 +104,6 @@ brew cask install disk-inventory-x
 brew cask install bettertouchtool
 brew cask install musicbrainz-picard
 brew cask install paparazzi
-brew cask install bittorrent-sync
 
 brew tap neovim/homebrew-neovim
 brew install --HEAD neovim

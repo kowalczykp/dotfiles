@@ -78,7 +78,7 @@ brew install libfaac
 brew install ffmpeg --with-libvpx --with-theora --with-libvorbis --with-faac
 brew install ffmpeg2theora
 brew install ansible
-brew install syncthing
+brew install syncthing010
 
 brew tap caskroom/cask
 brew install caskroom/cask/brew-cask

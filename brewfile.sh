@@ -100,10 +100,17 @@ brew cask install sqlite-database-browser
 brew cask install evernote
 #cask install plex
 #cask install unison-usenet
-brew cask install disk-inventory-x
 brew cask install bettertouchtool
 brew cask install musicbrainz-picard
 brew cask install paparazzi
+brew cask install appcleaner
+brew cask install daisydisk
+brew cask install disk-inventory-x
+brew cask install gpgtools
+brew cask install mactex
+brew cask install mou
+brew cask install tinkertool
+brew cask install xquartz
 
 brew tap neovim/homebrew-neovim
 brew install --HEAD neovim

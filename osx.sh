@@ -1,12 +1,18 @@
+if (( $# != 1 ))
+then
+  echo "Pass a computer name"
+  exit 1
+fi
+
 # Get sudo password and keepalive till end of script
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "sabo"
-sudo scutil --set HostName "sabo"
-sudo scutil --set LocalHostName "sabo"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "sabo"
+sudo scutil --set ComputerName "${1}"
+sudo scutil --set HostName "${1}"
+sudo scutil --set LocalHostName "${1}"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${1}"
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
@@ -155,6 +161,6 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 #Kill affected applications
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
     "Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
-      "Terminal" "Transmission" "Twitter" "iCal"; do
+    "Terminal" "Transmission" "Twitter" "iCal"; do
   killall "${app}" > /dev/null 2>&1
 done

@@ -47,7 +47,7 @@ Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/syntastic'
 Plugin 'mileszs/ack.vim'
 Plugin 'kana/vim-textobj-user'
-Plugin 'godlygeek/tabular'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'AndrewRadev/switch.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
@@ -503,7 +503,7 @@ let g:goyo_width=85
 
 let g:buffergator_suppress_keymaps = 1
 let g:slime_target = "tmux"
-let g:airline_detect_whitespace=2 "icon only
+let g:airline#extensions#whitespace#enabled = 1
 
 " this is for the switch plugin
 nnoremap - :Switch<cr>

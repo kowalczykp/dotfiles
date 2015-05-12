@@ -494,7 +494,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'less', 'c', 'h', 'go', 'haskell'],
       \ 'passive_filetypes': [] }
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_ruby_checkers=['mri']
+let g:syntastic_ruby_checkers=['rubocop', 'mri']
 let g:syntastic_aggregate_errors=1
 let g:syntastic_check_on_open=1
 

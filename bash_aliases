@@ -72,7 +72,7 @@ function speedtest {
   wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
 }
 
-b() {
+bu() {
   bundle $* && gem rdoc --all --ri --no-rdoc 2>&1 | grep --color=auto -v -e '^Gem::SourceIndex' -e '^NOTE: Gem::SourceIndex'
 }
 

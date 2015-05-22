@@ -238,7 +238,7 @@ vnoremap <F1> <ESC>
 nmap <leader>w :w!<cr>
 
 " Close all the buffers
-map <leader>ba :1,300 bd!<cr>
+map <leader>ba :%bd!<cr>
 
 " Regenerate ctags
 map <leader>c :! ctags --tag-relative -R --exclude=.git --links=no --languages=-javascript,sql<cr>

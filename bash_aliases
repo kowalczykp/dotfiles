@@ -73,7 +73,7 @@ function speedtest {
 }
 
 bu() {
-  bundle $* && gem rdoc --all --ri --no-rdoc 2>&1 | grep --color=auto -v -e '^Gem::SourceIndex' -e '^NOTE: Gem::SourceIndex'
+  bundle $* && bundle exec gem rdoc --all --ri --no-rdoc 2>&1 | grep --color=auto -v -e '^Gem::SourceIndex' -e '^NOTE: Gem::SourceIndex'
 }
 
 function fixperms() { chmod -R u=rwX,g=rX,o=rX "$@" ;}

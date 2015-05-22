@@ -1,0 +1,2 @@
+install: --no-rdoc --ri 
+update: --no-rdoc --ri 

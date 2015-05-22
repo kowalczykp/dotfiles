@@ -72,6 +72,10 @@ function speedtest {
   wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
 }
 
+b() {
+  bundle $* && gem rdoc --all --ri --no-rdoc 2>&1 | grep --color=auto -v -e '^Gem::SourceIndex' -e '^NOTE: Gem::SourceIndex'
+}
+
 function fixperms() { chmod -R u=rwX,g=rX,o=rX "$@" ;}
 
 # unregister broken GHC packages. Run this a few times to resolve dependency rot in installed packages.

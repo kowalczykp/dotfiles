@@ -281,6 +281,7 @@ nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer buffer<cr>
 nnoremap <leader>B :BuffergatorOpen<cr>
 
 " ri.vim remaps
+let g:ri_no_mappings=1
 nnoremap <leader>ri :call ri#OpenSearchPrompt(0)<cr> " horizontal split
 nnoremap <leader>RI :call ri#OpenSearchPrompt(1)<cr> " vertical split
 nnoremap <leader>RK :call ri#LookupNameUnderCursor()<cr> " keyword lookup

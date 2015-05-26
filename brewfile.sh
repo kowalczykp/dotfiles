@@ -1,5 +1,5 @@
 brew update
-brew upgrade
+brew upgrade --all
 
 brew tap homebrew/binary
 brew tap homebrew/versions

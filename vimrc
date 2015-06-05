@@ -167,8 +167,8 @@ set tags+=gems.tags
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc,.vimrc source $MYVIMRC
@@ -187,7 +187,7 @@ map Q gq
 " clear search buffer when hitting return
 " this is mapped to ctrl l in sensible
 " but is is a good key to use for something
-nnoremap <silent> <leader><space> :set nolist!<cr>
+" nnoremap <silent> <leader><space> :set nolist!<cr>
 
 " dont use cursor keys!
 nnoremap <up> <nop>
@@ -504,6 +504,11 @@ let g:goyo_width=85
 
 let g:buffergator_suppress_keymaps = 1
 let g:slime_target = "tmux"
+
+let g:airline_theme='solarized'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_section_z=''
 let g:airline#extensions#whitespace#enabled = 1
 
 " this is for the switch plugin

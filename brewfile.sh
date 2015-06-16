@@ -79,6 +79,7 @@ brew install ffmpeg --with-libvpx --with-theora --with-libvorbis --with-faac
 brew install ffmpeg2theora
 brew install ansible
 brew install syncthing010
+brew install python
 
 brew tap caskroom/cask
 brew install caskroom/cask/brew-cask
@@ -116,4 +117,9 @@ brew cask install google-drive
 brew tap neovim/homebrew-neovim
 brew install --HEAD neovim
 
+brew tap manastech/crystal
+brew install crystal-lang
+
 brew cleanup
+
+pip install glances

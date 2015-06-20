@@ -119,7 +119,7 @@ brew tap neovim/homebrew-neovim
 brew install --HEAD neovim
 
 brew tap manastech/crystal
-brew install crystal-lang
+brew install crystal-lang --with-llvm
 
 brew cleanup
 

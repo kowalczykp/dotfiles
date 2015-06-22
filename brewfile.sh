@@ -114,6 +114,7 @@ brew cask install tinkertool
 brew cask install xquartz
 brew cask install google-drive
 brew cask install calibre
+brew cask install dropbox
 
 brew tap neovim/homebrew-neovim
 brew install --HEAD neovim

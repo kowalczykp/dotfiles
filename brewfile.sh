@@ -87,8 +87,6 @@ brew install caskroom/cask/brew-cask
 # Applications
 brew cask install vagrant
 brew cask install virtualbox
-#cask install adium
-#cask install git-annex
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install skype
@@ -99,10 +97,7 @@ brew cask install firefox
 brew cask install tunnelblick
 brew cask install sqlite-database-browser
 brew cask install evernote
-#cask install plex
-#cask install unison-usenet
 brew cask install bettertouchtool
-brew cask install musicbrainz-picard
 brew cask install paparazzi
 brew cask install appcleaner
 brew cask install daisydisk
@@ -112,9 +107,16 @@ brew cask install mactex
 brew cask install mou
 brew cask install tinkertool
 brew cask install xquartz
-brew cask install google-drive
-brew cask install calibre
-brew cask install dropbox
+# not for work
+# brew cask install google-drive
+# brew cask install calibre
+# brew cask install dropbox
+# brew cask install musicbrainz-picard
+
+#cask install plex
+#cask install unison-usenet
+#cask install adium
+#cask install git-annex
 
 brew tap neovim/homebrew-neovim
 brew install --HEAD neovim

@@ -471,6 +471,11 @@ if has("autocmd")
     autocmd FileType html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd FileType ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
 
+    " autocmd FileType go nmap <leader>r <Plug>(go-run)
+    " autocmd FileType go nmap <leader>b <Plug>(go-build)
+    autocmd FileType go nmap <leader>t <Plug>(go-test)
+    " autocmd FileType go nmap <leader>c <Plug>(go-coverage)
+
     autocmd FileType haskell nnoremap <buffer> <leader>j :%!stylish-haskell<cr>
   augroup END
 endif

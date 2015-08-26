@@ -107,6 +107,8 @@ brew cask install mactex
 brew cask install mou
 brew cask install tinkertool
 brew cask install xquartz
+brew cask install intel-power-gadget
+brew cask install torbrowser
 # not for work
 # brew cask install google-drive
 # brew cask install calibre

@@ -64,6 +64,7 @@ brew install coreutils
 brew install ack
 brew install wget
 brew install ctags
+brew unlink ctags
 brew install htop
 brew install watch
 brew install vim
@@ -125,6 +126,9 @@ brew install --HEAD neovim
 
 brew tap manastech/crystal
 brew install crystal-lang --with-llvm
+
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags
 
 brew cleanup
 

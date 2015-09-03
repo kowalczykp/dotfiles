@@ -99,17 +99,17 @@ brew cask install tunnelblick
 brew cask install sqlite-database-browser
 brew cask install evernote
 brew cask install bettertouchtool
-brew cask install paparazzi
-brew cask install appcleaner
-brew cask install daisydisk
-brew cask install disk-inventory-x
+# brew cask install paparazzi
+# brew cask install appcleaner
+# brew cask install daisydisk
+# brew cask install disk-inventory-x
 brew cask install gpgtools
-brew cask install mactex
+# brew cask install mactex
 brew cask install mou
-brew cask install tinkertool
-brew cask install xquartz
-brew cask install intel-power-gadget
-brew cask install torbrowser
+# brew cask install tinkertool
+# brew cask install xquartz
+# brew cask install intel-power-gadget
+# brew cask install torbrowser
 # not for work
 # brew cask install google-drive
 # brew cask install calibre

@@ -116,6 +116,7 @@ brew cask install mou
 # brew cask install calibre
 # brew cask install dropbox
 # brew cask install musicbrainz-picard
+brew cask install slack
 
 #cask install plex
 #cask install unison-usenet

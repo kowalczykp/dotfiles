@@ -73,6 +73,7 @@ brew install ranger
 brew install cowsay
 brew install wakeonlan
 brew install tree
+brew install smartmontools
 brew install libvorbis
 brew install libvpx
 brew install libfaac

@@ -1,8 +1,13 @@
-brew update
-brew upgrade --all
-
 brew tap homebrew/binary
 brew tap homebrew/versions
+brew tap caskroom/cask
+brew tap neovim/homebrew-neovim
+brew tap manastech/crystal
+brew tap universal-ctags/universal-ctags
+brew tap homebrew/science
+
+brew update
+brew upgrade --all
 
 brew install mercurial
 brew install tig
@@ -84,10 +89,10 @@ brew install syncthing010
 brew install python
 brew install xhyve
 
-brew tap caskroom/cask
 brew install caskroom/cask/brew-cask
 
 # Applications
+brew install Caskroom/cask/java
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install google-chrome
@@ -106,10 +111,8 @@ brew cask install bettertouchtool
 # brew cask install daisydisk
 # brew cask install disk-inventory-x
 brew cask install gpgtools
-# brew cask install mactex
 brew cask install mou
 # brew cask install tinkertool
-# brew cask install xquartz
 # brew cask install intel-power-gadget
 # brew cask install torbrowser
 # not for work
@@ -124,14 +127,16 @@ brew cask install slack
 #cask install adium
 #cask install git-annex
 
-brew tap neovim/homebrew-neovim
 brew install --HEAD neovim
-
-brew tap manastech/crystal
 brew install crystal-lang --with-llvm
-
-brew tap universal-ctags/universal-ctags
 brew install --HEAD universal-ctags
+
+# Science
+brew install gnuplot --with-qt --with-x11
+brew cask install mactex
+brew cask install xquartz
+brew install octave --with-x11
+brew install fltk
 
 brew cleanup
 

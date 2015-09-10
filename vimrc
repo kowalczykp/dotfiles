@@ -84,6 +84,7 @@ Plugin 'dag/vim2hs.git'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'rhysd/vim-crystal'
+Plugin 'jvirtanen/vim-octave'
 " Plugin 'Neurogami/mirah-vim'
 " Plugin 'guns/vim-clojure-static'
 " Plugin 'guns/paredit'
@@ -475,6 +476,8 @@ if has("autocmd")
     " autocmd FileType go nmap <leader>b <Plug>(go-build)
     autocmd FileType go nmap <leader>t <Plug>(go-test)
     " autocmd FileType go nmap <leader>c <Plug>(go-coverage)
+
+    autocmd FileType octave nmap <leader>t maggOpkg load all<esc>Gopause<esc>:w<cr>:!octave -qf %<cr>ddggdd:w<cr>`a
 
     autocmd FileType haskell nnoremap <buffer> <leader>j :%!stylish-haskell<cr>
   augroup END

@@ -104,7 +104,7 @@ brew cask install flash
 brew cask install firefox
 brew cask install tunnelblick
 brew cask install sqlite-database-browser
-brew cask install evernote
+# brew cask install evernote get from app store
 brew cask install bettertouchtool
 # brew cask install paparazzi
 # brew cask install appcleaner

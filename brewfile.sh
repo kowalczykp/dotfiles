@@ -104,23 +104,23 @@ brew cask install flash
 brew cask install firefox
 brew cask install tunnelblick
 brew cask install sqlite-database-browser
-# brew cask install evernote get from app store
+brew cask install evernote
 brew cask install bettertouchtool
+brew cask install gpgtools
+brew cask install slack
+brew cask install mou
+
 # brew cask install paparazzi
 # brew cask install appcleaner
 # brew cask install daisydisk
 # brew cask install disk-inventory-x
-brew cask install gpgtools
-brew cask install mou
 # brew cask install tinkertool
 # brew cask install intel-power-gadget
 # brew cask install torbrowser
-# not for work
 # brew cask install google-drive
 # brew cask install calibre
-# brew cask install dropbox
 # brew cask install musicbrainz-picard
-brew cask install slack
+# brew cask install dropbox
 
 #cask install plex
 #cask install unison-usenet

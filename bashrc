@@ -37,6 +37,13 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     source /etc/bash_completion
   fi
+   
+  # this fixes the g git alias
+  if [ -f /usr/share/bash-completion/completions/git ]; then
+    source /usr/share/bash-completion/completions/git
+  elif [ -f /etc/bash_completion/completions/git ]; then
+    source /etc/bash_completion/completions/git
+  fi
 fi
 
 if [ -f ~/dotfiles/liquidprompt/liquidprompt ]; then

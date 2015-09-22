@@ -135,6 +135,7 @@ brew install --HEAD universal-ctags
 brew install gnuplot --with-qt --with-x11
 brew cask install mactex
 brew cask install xquartz
+brew install ghostscript
 brew install octave --with-x11
 brew install fltk
 

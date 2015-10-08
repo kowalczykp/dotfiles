@@ -103,7 +103,7 @@ brew cask install vlc
 brew cask install flash
 brew cask install firefox
 brew cask install tunnelblick
-brew cask install sqlite-database-browser
+brew cask install sqlitebrowser
 brew cask install evernote
 brew cask install bettertouchtool
 brew cask install gpgtools

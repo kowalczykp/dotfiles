@@ -112,6 +112,7 @@ brew cask install gpgtools
 brew cask install slack
 brew cask install mou
 brew cask install wkhtmltopdf
+brew cask install aerial
 
 # brew cask install paparazzi
 # brew cask install appcleaner

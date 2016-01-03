@@ -132,6 +132,10 @@ brew cask install speak
 #cask install adium
 #cask install git-annex
 
+brew install Caskroom/cask/avidemux
+brew install Caskroom/cask/audacity
+brew install Caskroom/cask/aegisub
+
 brew install --HEAD neovim
 brew install crystal-lang --with-llvm
 brew install --HEAD universal-ctags

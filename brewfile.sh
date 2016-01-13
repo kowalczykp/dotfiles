@@ -136,6 +136,8 @@ brew install Caskroom/cask/avidemux
 brew install Caskroom/cask/audacity
 brew install Caskroom/cask/aegisub
 
+brew cask install Caskroom/cask/pgadmin3
+
 brew install --HEAD neovim
 brew install crystal-lang --with-llvm
 brew install --HEAD universal-ctags

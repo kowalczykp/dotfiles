@@ -137,6 +137,7 @@ brew install Caskroom/cask/audacity
 brew install Caskroom/cask/aegisub
 
 brew cask install Caskroom/cask/pgadmin3
+brew cask install duet
 
 brew install --HEAD neovim
 brew install crystal-lang --with-llvm

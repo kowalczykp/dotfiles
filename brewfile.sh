@@ -5,6 +5,7 @@ brew tap neovim/homebrew-neovim
 brew tap manastech/crystal
 brew tap universal-ctags/universal-ctags
 brew tap homebrew/science
+brew tap nlf/dhyve
 
 brew update
 brew upgrade --all
@@ -38,7 +39,6 @@ brew install ghc cabal-install
 #install gd
 #install graphviz --with-pdf
 #install reattach-to-user-namespace
-#install docker
 #install id3tool
 #install imagemagick
 #install unrar
@@ -51,6 +51,10 @@ brew install libtool
 brew install libyaml
 # brew install libressl
 brew install openssl
+
+brew install docker
+brew install docker-machine
+brew install docker-compose
 
 brew install autoconf
 brew install automake
@@ -142,6 +146,8 @@ brew cask install duet
 brew install --HEAD neovim
 brew install crystal-lang --with-llvm
 brew install --HEAD universal-ctags
+
+brew install --HEAD dhyve
 
 # Science
 brew install gnuplot --with-qt --with-x11

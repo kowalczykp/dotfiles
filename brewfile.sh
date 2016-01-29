@@ -111,7 +111,6 @@ brew cask install firefox
 brew cask install tunnelblick
 brew cask install sqlitebrowser
 brew cask install evernote
-brew cask install bettertouchtool
 brew cask install gpgtools
 brew cask install slack
 brew cask install mou

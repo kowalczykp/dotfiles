@@ -5,6 +5,7 @@ brew tap neovim/homebrew-neovim
 brew tap manastech/crystal
 brew tap universal-ctags/universal-ctags
 brew tap homebrew/science
+brew tap nlf/dhyve
 
 brew update
 brew upgrade --all
@@ -38,7 +39,6 @@ brew install ghc cabal-install
 #install gd
 #install graphviz --with-pdf
 #install reattach-to-user-namespace
-#install docker
 #install id3tool
 #install imagemagick
 #install unrar
@@ -52,6 +52,10 @@ brew install libyaml
 # brew install libressl
 brew install openssl
 
+brew install docker
+brew install docker-machine
+brew install docker-compose
+
 brew install autoconf
 brew install automake
 brew install pkg-config
@@ -62,6 +66,8 @@ brew install chruby
 brew install ruby-install
 brew install nodejs
 brew install go
+brew install bdw-gc gmp libevent libpcl libxml2 libyaml llvm
+brew link llvm --force
 
 brew install bash
 brew install bash-completion
@@ -103,12 +109,14 @@ brew cask install vlc
 brew cask install flash
 brew cask install firefox
 brew cask install tunnelblick
-brew cask install sqlite-database-browser
+brew cask install sqlitebrowser
 brew cask install evernote
-brew cask install bettertouchtool
 brew cask install gpgtools
 brew cask install slack
 brew cask install mou
+brew cask install wkhtmltopdf
+brew cask install aerial
+brew cask install speak
 
 # brew cask install paparazzi
 # brew cask install appcleaner
@@ -127,14 +135,24 @@ brew cask install mou
 #cask install adium
 #cask install git-annex
 
+brew install Caskroom/cask/avidemux
+brew install Caskroom/cask/audacity
+brew install Caskroom/cask/aegisub
+
+brew cask install Caskroom/cask/pgadmin3
+brew cask install duet
+
 brew install --HEAD neovim
 brew install crystal-lang --with-llvm
 brew install --HEAD universal-ctags
+
+brew install --HEAD dhyve
 
 # Science
 brew install gnuplot --with-qt --with-x11
 brew cask install mactex
 brew cask install xquartz
+brew install ghostscript
 brew install octave --with-x11
 brew install fltk
 

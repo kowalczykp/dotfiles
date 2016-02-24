@@ -6,6 +6,7 @@ brew tap manastech/crystal
 brew tap universal-ctags/universal-ctags
 brew tap homebrew/science
 brew tap nlf/dhyve
+brew tap caskroom/fonts
 
 brew update
 brew upgrade --all
@@ -151,6 +152,7 @@ brew install --HEAD dhyve
 # Science
 brew install gnuplot --with-qt --with-x11
 brew cask install mactex
+brew cask install font-fontawesome
 brew cask install xquartz
 brew install ghostscript
 brew install octave --with-x11

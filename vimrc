@@ -233,6 +233,11 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+xmap \\  <Plug>Commentary<CR>
+nmap \\  <CR><Plug>Commentary
+nmap \\\ <Plug>CommentaryLine<CR>:normal k<CR>
+nmap \\u <Plug>CommentaryUndo<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

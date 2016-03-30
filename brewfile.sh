@@ -1,12 +1,14 @@
 brew tap homebrew/binary
 brew tap homebrew/versions
-brew tap caskroom/cask
 brew tap neovim/homebrew-neovim
 brew tap manastech/crystal
 brew tap universal-ctags/universal-ctags
 brew tap homebrew/science
 brew tap nlf/dhyve
+
+brew tap caskroom/cask
 brew tap caskroom/fonts
+brew tap caskroom/versions
 
 brew update
 brew upgrade --all
@@ -97,13 +99,14 @@ brew install python
 brew install xhyve
 
 brew install caskroom/cask/brew-cask
+brew install caskroom/cask/java
 
 # Applications
-brew install Caskroom/cask/java
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install google-chrome
-brew cask install iterm2
+# brew cask install iterm2
+brew cask install iterm2-beta
 brew cask install skype
 brew cask install sequel-pro
 brew cask install vlc
@@ -137,9 +140,9 @@ brew cask install flux
 #cask install adium
 #cask install git-annex
 
-brew install Caskroom/cask/avidemux
-brew install Caskroom/cask/audacity
-brew install Caskroom/cask/aegisub
+brew install caskroom/cask/avidemux
+brew install caskroom/cask/audacity
+brew install caskroom/cask/aegisub
 
 brew cask install Caskroom/cask/pgadmin3
 brew cask install duet

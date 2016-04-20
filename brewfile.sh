@@ -112,7 +112,7 @@ brew cask install sequel-pro
 brew cask install vlc
 brew cask install flash
 brew cask install firefox
-brew cask install tunnelblick
+brew cask install viscosity
 brew cask install sqlitebrowser
 brew cask install evernote
 brew cask install gpgtools

@@ -97,6 +97,7 @@ brew install ansible
 brew install syncthing010
 brew install python
 brew install xhyve
+brew install dnsmasq
 
 brew install caskroom/cask/brew-cask
 brew install caskroom/cask/java

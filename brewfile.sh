@@ -98,6 +98,7 @@ brew install ansible
 brew install syncthing010
 brew install python
 brew install xhyve
+brew install dnsmasq
 
 brew install caskroom/cask/brew-cask
 brew install caskroom/cask/java
@@ -123,6 +124,7 @@ brew cask install wkhtmltopdf
 brew cask install aerial
 brew cask install speak
 brew cask install flux
+brew cask install recordit
 
 # brew cask install paparazzi
 # brew cask install appcleaner

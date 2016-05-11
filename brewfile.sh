@@ -58,6 +58,7 @@ brew install openssl
 brew install docker
 brew install docker-machine
 brew install docker-compose
+brew install docker-clean
 
 brew install autoconf
 brew install automake

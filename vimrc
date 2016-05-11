@@ -513,6 +513,9 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_ruby_checkers=['rubocop', 'mri']
 let g:syntastic_aggregate_errors=1
 let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=0
+let g:syntastic_auto_loc_list=1
 
 let g:vim_markdown_folding_disabled=1
 let g:goyo_width=85

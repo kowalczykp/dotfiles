@@ -22,7 +22,8 @@
   cia = commit --amend
   mod = "!git status --porcelain | awk '{print $2}'"
   staged = diff --name-only --cached
-  pom = pull origin master
+  pom = pull --ff-only origin master
+  pum = pull --ff-only upstream master
   active = for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'
   alias = config --get-regexp alias
   sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`

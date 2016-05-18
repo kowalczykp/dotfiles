@@ -316,15 +316,6 @@ function! ShowRoutes()
 endfunction
 map <leader>gR :call ShowRoutes()<cr>
 
-function! EditWiki()
-  if isdirectory(expand("$HOME/wiki"))
-    if filereadable(expand("$HOME/wiki/home.md"))
-      :edit $HOME/wiki/home.md
-    endif
-  endif
-endfunction
-map <leader>gw :call EditWiki()<cr>
-
 map <leader>e :edit %%
 " map <leader>v :view %%
 
@@ -476,7 +467,7 @@ if has("autocmd")
     autocmd FileType css,scss,less vmap <leader>j  :!js-beautify --type=css -j -q -p -B -s 2 -f -<cr>
     autocmd FileType html,eruby nmap <leader>j :%!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
     autocmd FileType html,eruby vmap <leader>j  :!js-beautify --type=html -j -p -q -B -s 2 -f -<cr>
-    autocmd FileType ruby nnoremap <leader>l :SyntasticCheck rubylint rubocop<cr>
+    autocmd FileType ruby nnoremap <leader>l :Errors<cr>
 
     " autocmd FileType go nmap <leader>r <Plug>(go-run)
     " autocmd FileType go nmap <leader>b <Plug>(go-build)
@@ -510,12 +501,12 @@ let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': ['ruby', 'javascript', 'css', 'hmtl', 'scss', 'less', 'c', 'h', 'go', 'haskell'],
       \ 'passive_filetypes': [] }
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_ruby_checkers=['rubocop', 'mri']
+let g:syntastic_ruby_checkers=['rubylint', 'rubocop', 'mri']
 let g:syntastic_aggregate_errors=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 
 let g:vim_markdown_folding_disabled=1
 let g:goyo_width=85

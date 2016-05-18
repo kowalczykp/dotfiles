@@ -42,7 +42,6 @@ Plugin 'tpope/vim-tbone'
 Plugin 'tpope/vim-dispatch'
 
 " Language agnostic
-Plugin 'myusuf3/numbers.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/syntastic'
 Plugin 'mileszs/ack.vim'
@@ -123,6 +122,7 @@ set undolevels=1000
 set cpoptions+=$
 
 set number
+set relativenumber
 
 " search highlights on, and dynamic searching
 " set hlsearch
@@ -530,14 +530,12 @@ function! s:goyo_before()
   silent !tmux set status off
   set noshowmode
   set noshowcmd
-  NumbersOnOff
 endfunction
 
 function! s:goyo_after()
   silent !tmux set status on
   set showmode
   set showcmd
-  NumbersEnable
 endfunction
 
 let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]

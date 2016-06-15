@@ -125,6 +125,8 @@ brew cask install aerial
 brew cask install speak
 brew cask install flux
 brew cask install recordit
+brew cask install clipgrab
+brew cask install omnidisksweeper
 
 # brew cask install paparazzi
 # brew cask install appcleaner

@@ -1,11 +1,21 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+mkdir -p $HOME/.config
+
 for file in vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore inputrc psqlrc jshintrc gemrc
 do
   if [ -a $HOME/.${file} ]
   then echo ".$file found, doing nothing"
   else ln -sf $DIR/$file $HOME/.$file && echo ".$file installed"
+  fi
+done
+
+for file in liquidpromptrc
+do
+  if [ -a $HOME/.config/${file} ]
+  then echo ".$file found, doing nothing"
+  else ln -sf $DIR/$file $HOME/.config/$file && echo ".$file installed"
   fi
 done
 

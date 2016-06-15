@@ -47,7 +47,7 @@ if ! shopt -oq posix; then
 fi
 
 if [ -f ~/dotfiles/liquidprompt/liquidprompt ]; then
-  source ~/dotfiles/liquidprompt/liquidprompt
+  [[ $- = *i* ]] && source ~/dotfiles/liquidprompt/liquidprompt
 fi
 PROMPT_COMMAND="$PROMPT_COMMAND;set_bundle_gemfile"
 

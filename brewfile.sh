@@ -122,7 +122,6 @@ brew cask install slack
 brew cask install mou
 brew cask install wkhtmltopdf
 brew cask install aerial
-brew cask install speak
 brew cask install flux
 brew cask install recordit
 brew cask install clipgrab

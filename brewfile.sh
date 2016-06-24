@@ -20,6 +20,8 @@ brew install git-extras
 brew install git-sh
 brew install mercurial
 
+brew install ghc cabal-install
+
 #install mongodb
 #install mysql
 #install redis
@@ -32,8 +34,7 @@ brew install mercurial
 #install phantomjs
 #install gcc48
 #install gcc49
-brew install ghc cabal-install
-#brew install clamav
+#install clamav
 #install ssh-copy-id
 #install s3cmd
 #install fdupes
@@ -52,8 +53,8 @@ brew install ghc cabal-install
 
 brew install libtool
 brew install libyaml
-# brew install libressl
 brew install openssl
+# brew install libressl
 
 brew install docker
 brew install docker-machine
@@ -107,8 +108,7 @@ brew install caskroom/cask/java
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install google-chrome
-# brew cask install iterm2
-brew cask install iterm2-beta
+brew cask install iterm2
 brew cask install skype
 brew cask install sequel-pro
 brew cask install vlc

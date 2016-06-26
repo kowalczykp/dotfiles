@@ -126,6 +126,7 @@ brew cask install flux
 brew cask install recordit
 brew cask install clipgrab
 brew cask install omnidisksweeper
+brew cask install torbrowser
 
 # brew cask install paparazzi
 # brew cask install appcleaner
@@ -133,7 +134,6 @@ brew cask install omnidisksweeper
 # brew cask install disk-inventory-x
 # brew cask install tinkertool
 # brew cask install intel-power-gadget
-# brew cask install torbrowser
 # brew cask install google-drive
 # brew cask install calibre
 # brew cask install musicbrainz-picard

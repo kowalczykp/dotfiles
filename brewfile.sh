@@ -98,7 +98,7 @@ brew install ffmpeg2theora
 brew install ansible
 brew install syncthing010
 brew install python
-brew install xhyve
+brew install --HEAD xhyve
 brew install dnsmasq
 
 brew install caskroom/cask/brew-cask

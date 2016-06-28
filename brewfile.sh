@@ -4,7 +4,6 @@ brew tap neovim/homebrew-neovim
 brew tap manastech/crystal
 brew tap universal-ctags/universal-ctags
 brew tap homebrew/science
-brew tap nlf/dhyve
 
 brew tap caskroom/cask
 brew tap caskroom/fonts
@@ -154,8 +153,6 @@ brew cask install duet
 brew install --HEAD neovim
 brew install crystal-lang --with-llvm
 brew install --HEAD universal-ctags
-
-brew install --HEAD dhyve
 
 # Science
 brew install gnuplot --with-qt --with-x11

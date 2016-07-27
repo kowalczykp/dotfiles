@@ -59,11 +59,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/unite.vim'
 Plugin 'schickling/vim-bufonly'
 Plugin 'kana/vim-textobj-indent'
+Plugin 'janko-m/vim-test'
 " Plugin 'basyura/unite-rails' remove until i've used unite for a while
 " Plugin 'mmai/wikilink' this is breaking open from location list
 
 " Ruby
-Plugin 'skalnik/vim-vroom'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'ecomba/vim-ruby-refactoring'
@@ -326,9 +326,11 @@ nnoremap <leader>v V`]
 nnoremap <leader><leader> <c-^>
 
 " Run this file
-let g:vroom_map_keys = 0
-silent! map <unique> <leader>t :VroomRunTestFile<CR>
-silent! map <unique> <leader>T :VroomRunNearestTest<CR>
+nmap <silent> <leader>T :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
+" nmap <silent> <leader>a :TestSuite<CR>
+" nmap <silent> <leader>l :TestLast<CR>
+" nmap <silent> <leader>g :TestVisit<CR>
 
 nnoremap <leader>p :set paste!<cr>
 

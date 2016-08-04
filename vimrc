@@ -342,7 +342,7 @@ nmap <leader>m :make<cr>:copen<cr>
 " Add ranger as a file chooser in vim
 "
 " If you add this code to the .vimrc, ranger can be started using the command
-" ":RagerChooser" or the keybinding "<leader>r".  Once you select one or more
+" ":RangeChooser" or the keybinding "<leader>r".  Once you select one or more
 " files, press enter and ranger will quit again and vim will open the selected
 " files.
 
@@ -374,6 +374,7 @@ endfunction
 command! -bar RangerChooser call RangeChooser()
 nnoremap <leader>r :<C-U>RangerChooser<CR>
 
+command! Docker let test#ruby#rspec#executable = 'docker-compose run '.fnamemodify(getcwd(), ':t').' bundle exec rspec'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unused mappings ATM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

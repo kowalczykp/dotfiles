@@ -20,7 +20,7 @@
   lsv = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --numstat
 
   cia = commit --amend
-  mod = "!git status --porcelain | awk '{print $2}'"
+  mod = "!git status --porcelain -uno | awk '{print $2}'"
   staged = diff --name-only --cached
   pom = pull --ff-only origin master
   pum = pull --ff-only upstream master

@@ -273,6 +273,7 @@ call unite#custom_source('file_rec,file_mru,file,buffer,grep',
       \ 'shared/',
       \ 'assets/',
       \ 'vendor/',
+      \ '.bundle/',
       \ 'bin/',
       \ 'node_modules',
       \ ], '\|'))
@@ -326,8 +327,8 @@ nnoremap <leader>v V`]
 nnoremap <leader><leader> <c-^>
 
 " Run this file
-nmap <silent> <leader>T :TestNearest<CR>
-nmap <silent> <leader>t :TestFile<CR>
+nmap <silent> <leader>T :w<cr>:TestNearest<CR>
+nmap <silent> <leader>t :w<cr>:TestFile<CR>
 " nmap <silent> <leader>a :TestSuite<CR>
 " nmap <silent> <leader>l :TestLast<CR>
 " nmap <silent> <leader>g :TestVisit<CR>
@@ -375,6 +376,7 @@ command! -bar RangerChooser call RangeChooser()
 nnoremap <leader>r :<C-U>RangerChooser<CR>
 
 command! Docker let test#ruby#rspec#executable = 'docker-compose run '.fnamemodify(getcwd(), ':t').' bundle exec rspec'
+command! DockerLegacy let test#ruby#rspec#executable = 'docker-compose run '.fnamemodify(getcwd(), ':t').' bundle exec spec'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unused mappings ATM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

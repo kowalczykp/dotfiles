@@ -444,6 +444,7 @@ if has("autocmd")
     autocmd FileType wisp call PareditInitBuffer()
     " autocmd BufNewFile,BufRead *.go setlocal ts=2 sts=2 sw=2 noexpandtab
     " autocmd BufNewFile,BufRead *.hs setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd BufNewFile,BufRead *.cpp setlocal ts=2 sts=2 sw=2 noexpandtab
 
     autocmd FileType markdown nmap <leader>m :%!kramdown --no-auto-ids<cr>
     autocmd FileType markdown vmap <leader>m :!kramdown --no-auto-ids<cr>

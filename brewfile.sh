@@ -100,7 +100,6 @@ brew install python
 brew install --HEAD xhyve
 brew install dnsmasq
 
-brew install caskroom/cask/brew-cask
 brew install caskroom/cask/java
 
 # Applications
@@ -126,6 +125,7 @@ brew cask install recordit
 brew cask install clipgrab
 brew cask install omnidisksweeper
 brew cask install torbrowser
+brew cask install tagspaces
 
 # brew cask install paparazzi
 # brew cask install appcleaner

@@ -1,25 +1,95 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+PLUGINS="vim/pack/plugins/start/"
+git submodule init
+for REPO in \
+  tpope/vim-sensible \
+  tpope/vim-git \
+  tpope/vim-sleuth \
+  tpope/vim-eunuch \
+  tpope/vim-fugitive \
+  tpope/vim-unimpaired \
+  tpope/vim-afterimage \
+  tpope/vim-abolish \
+  tpope/vim-rake \
+  tpope/vim-commentary \
+  tpope/vim-rails \
+  tpope/vim-repeat \
+  tpope/vim-surround \
+  tpope/vim-endwise \
+  tpope/vim-ragtag \
+  tpope/vim-bundler \
+  tpope/vim-cucumber \
+  tpope/vim-vividchalk \
+  tpope/vim-fireplace \
+  tpope/vim-classpath \
+  tpope/vim-tbone \
+  tpope/vim-dispatch \
+  jeetsukumaran/vim-buffergator \
+  scrooloose/syntastic \
+  mileszs/ack.vim \
+  kana/vim-textobj-user \
+  junegunn/vim-easy-align \
+  andrewradev/switch.vim \
+  airblade/vim-gitgutter \
+  vim-airline/vim-airline \
+  vim-airline/vim-airline-themes \
+  tjennings/git-grep-vim \
+  ervandew/supertab \
+  vim-scripts/DirDiff.vim \
+  junegunn/goyo.vim \
+  majutsushi/tagbar \
+  schickling/vim-bufonly \
+  kana/vim-textobj-indent \
+  janko-m/vim-test \
+  altercation/vim-colors-solarized \
+  shougo/unite.vim \
+  vim-ruby/vim-ruby \
+  nelstrom/vim-textobj-rubyblock \
+  ecomba/vim-ruby-refactoring \
+  danchoi/ri.vim \
+  mattn/emmet-vim \
+  ekalinin/Dockerfile.vim \
+  pangloss/vim-javascript \
+  cakebaker/scss-syntax.vim \
+  groenewege/vim-less \
+  othree/html5.vim \
+  kchmck/vim-coffee-script \
+  nono/vim-handlebars \
+  fatih/vim-go \
+  chrisbra/csv.vim \
+  plasticboy/vim-markdown \
+  vim-pandoc/vim-pandoc \
+  rhysd/vim-crystal \
+  jvirtanen/vim-octave
+do
+  PLUGIN=${REPO##*/}
+  if [[ -a $PLUGINS/$PLUGIN ]] 
+  then echo "$PLUGIN found"
+  else git submodule add https://github.com/$REPO.git $PLUGINS/$PLUGIN
+  fi
+done
+echo "Updating all submodules ..."
+git submodule update --remote --merge
+
 mkdir -p $HOME/.config
 
-for file in vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore inputrc psqlrc jshintrc gemrc
+for FILE in vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore inputrc psqlrc jshintrc gemrc
 do
-  if [ -a $HOME/.${file} ]
-  then echo ".$file found, doing nothing"
-  else ln -sf $DIR/$file $HOME/.$file && echo ".$file installed"
+  if [ -a $HOME/.${FILE} ]
+  then echo ".$FILE found, doing nothing"
+  else ln -sf $DIR/$FILE $HOME/.$FILE && echo ".$FILE installed"
   fi
 done
 
-for file in liquidpromptrc
+for FILE in liquidpromptrc
 do
-  if [ -a $HOME/.config/${file} ]
-  then echo ".$file found, doing nothing"
-  else ln -sf $DIR/$file $HOME/.config/$file && echo ".$file installed"
+  if [ -a $HOME/.config/${FILE} ]
+  then echo ".$FILE found, doing nothing"
+  else ln -sf $DIR/$FILE $HOME/.config/$FILE && echo ".$FILE installed"
   fi
 done
-
-echo $name
 
 # gitconfig
 if [ -a $HOME/.gitconfig ]

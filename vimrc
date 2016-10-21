@@ -7,93 +7,15 @@
 set nocompatible
 " set term=ansi
 
-" this is a tpope plugin for normalizing vim
-" including this here should run it before vimrc to allow overrides
-" runtime! plugin/sensible.vim
-
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Plugin 'gmarik/vundle'
-
-" tpope
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-afterimage'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-ragtag'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-vividchalk'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-classpath'
-Plugin 'tpope/vim-tbone'
-Plugin 'tpope/vim-dispatch'
-
 " Language agnostic
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'scrooloose/syntastic'
-Plugin 'mileszs/ack.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'AndrewRadev/switch.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tjennings/git-grep-vim'
-Plugin 'ervandew/supertab'
-Plugin 'vim-scripts/DirDiff.vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'Shougo/unite.vim'
-Plugin 'schickling/vim-bufonly'
-Plugin 'kana/vim-textobj-indent'
-Plugin 'janko-m/vim-test'
-" Plugin 'basyura/unite-rails' remove until i've used unite for a while
-" Plugin 'mmai/wikilink' this is breaking open from location list
-
-" Ruby
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'danchoi/ri.vim'
+" " Plugin 'basyura/unite-rails' remove until i've used unite for a while
+" " Plugin 'mmai/wikilink' this is breaking open from location list
 
 " Other languages
-Plugin 'mattn/emmet-vim'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'groenewege/vim-less'
-Plugin 'othree/html5.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'nono/vim-handlebars'
-Plugin 'fatih/vim-go'
-Plugin 'chrisbra/csv.vim'
-Plugin 'dag/vim2hs.git'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'rhysd/vim-crystal'
-Plugin 'jvirtanen/vim-octave'
-" Plugin 'Neurogami/mirah-vim'
-" Plugin 'guns/vim-clojure-static'
-" Plugin 'guns/paredit'
-" Plugin 'bitc/vim-hdevtools'
-
-" Colours
-Plugin 'ciaranm/inkpot'
-Plugin 'vim-scripts/peaksea'
-Plugin 'altercation/vim-colors-solarized'
+" " Plugin 'Neurogami/mirah-vim'
+" " Plugin 'guns/vim-clojure-static'
+" " Plugin 'guns/paredit'
+" " Plugin 'bitc/vim-hdevtools'
 
 filetype plugin indent on
 

@@ -44,7 +44,7 @@ for REPO in \
   kana/vim-textobj-indent \
   janko-m/vim-test \
   altercation/vim-colors-solarized \
-  shougo/unite.vim \
+  ctrlpvim/ctrlp.vim \
   vim-ruby/vim-ruby \
   nelstrom/vim-textobj-rubyblock \
   ecomba/vim-ruby-refactoring \

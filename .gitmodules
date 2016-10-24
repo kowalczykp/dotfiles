@@ -22,9 +22,6 @@
 [submodule "vim/pack/plugins/start/vim-colors-solarized"]
 	path = vim/pack/plugins/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/pack/plugins/start/unite.vim"]
-	path = vim/pack/plugins/start/unite.vim
-	url = https://github.com/shougo/unite.vim.git
 [submodule "vim/pack/plugins/start/vim-sleuth"]
 	path = vim/pack/plugins/start/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
@@ -190,3 +187,6 @@
 [submodule "vim/pack/plugins/start/vim-octave"]
 	path = vim/pack/plugins/start/vim-octave
 	url = https://github.com/jvirtanen/vim-octave.git
+[submodule "vim/pack/plugins/start/ctrlp.vim"]
+	path = vim/pack/plugins/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git

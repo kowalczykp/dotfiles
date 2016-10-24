@@ -8,7 +8,6 @@ set nocompatible
 " set term=ansi
 
 " Language agnostic
-" " Plugin 'basyura/unite-rails' remove until i've used unite for a while
 " " Plugin 'mmai/wikilink' this is breaking open from location list
 
 " Other languages
@@ -184,29 +183,6 @@ vnoremap <leader>H :s/:\(\w\+\)\(\s*\)=>\(\s*\)/\1: /gc<cr>
 " map leader-G to convert to 1.8 hashs
 nnoremap <leader>G :%s/\(\w\+\):\(\s\+\)/:\1 => /gc<cr>
 vnoremap <leader>G :s/\(\w\+\):\(\s\+\)/:\1 => /gc<cr>
-
-" Open files with <leader>f
-let g:unite_source_history_yank_enable = 1
-let g:unite_source_grep_default_opts = '-iR'''
-" call unite#custom_source('file_rec,file_mru,file,buffer,grep',
-"       \ 'ignore_pattern', join([
-"       \ '\.git/',
-"       \ 'tmp/',
-"       \ 'shared/',
-"       \ 'assets/',
-"       \ 'vendor/',
-"       \ '.bundle/',
-"       \ 'bin/',
-"       \ 'node_modules',
-"       \ ], '\|'))
-" call unite#filters#matcher_default#use(['matcher_fuzzy'])
-" call unite#filters#sorter_default#use(['sorter_rank'])
-nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec<cr>
-nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=files -quick-match buffer<cr>
-nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
-nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank -start-insert history/yank<cr>
-nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer buffer<cr>
-" nnoremap <leader>m :<C-u>Unite -start-insert file_mru<cr>
 
 nnoremap <leader>B :BuffergatorOpen<cr>
 

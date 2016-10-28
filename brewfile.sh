@@ -4,13 +4,14 @@ brew tap neovim/homebrew-neovim
 brew tap manastech/crystal
 brew tap universal-ctags/universal-ctags
 brew tap homebrew/science
+brew tap buo/cask-upgrade
 
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
 
 brew update
-brew upgrade --all
+brew upgrade
 
 brew install mercurial
 brew install tig
@@ -59,6 +60,7 @@ brew install docker
 brew install docker-machine
 brew install docker-compose
 brew install docker-clean
+brew install docker-machine-driver-xhyve
 
 brew install autoconf
 brew install automake
@@ -147,7 +149,7 @@ brew install caskroom/cask/avidemux
 brew install caskroom/cask/audacity
 brew install caskroom/cask/aegisub
 
-brew cask install Caskroom/cask/pgadmin3
+brew cask install caskroom/cask/pgadmin3
 brew cask install duet
 
 brew install --HEAD neovim
@@ -164,5 +166,6 @@ brew install octave --with-x11
 brew install fltk
 
 brew cleanup
+brew cask cleanup
 
 pip install glances

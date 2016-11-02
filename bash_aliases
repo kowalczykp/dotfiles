@@ -19,6 +19,7 @@ alias gr='git r'
 alias dotgit='GIT_DIR=~/dotfiles/.git GIT_WORK_TREE=~/dotfiles git'
 
 alias be='bundle exec'
+alias m="make -f Makefile.dev"
 alias jr='jruby -S'
 alias bl='set_bundle_gemfile'
 alias mrake='reattach-to-user-namespace -l rake'

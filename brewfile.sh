@@ -151,6 +151,7 @@ install mactex
 install font-fontawesome
 install xquartz
 install java
+install deluge
 
 # brew cask install paparazzi
 # brew cask install appcleaner

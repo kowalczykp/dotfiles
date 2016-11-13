@@ -346,15 +346,6 @@ if has("autocmd")
     autocmd FileType markdown nmap <leader>m :%!kramdown --no-auto-ids<cr>
     autocmd FileType markdown vmap <leader>m :!kramdown --no-auto-ids<cr>
 
-    function! s:unite_settings()
-      " Play nice with supertab
-      let b:SuperTabDisabled=1
-      " Enable navigation with control-j and control-k in insert mode
-      imap <buffer> <C-j> <Plug>(unite_select_next_line)
-      imap <buffer> <C-k> <Plug>(unite_select_previous_line)
-      nmap <buffer> <ESC> <Plug>(unite_exit)
-    endfunction
-    autocmd FileType unite call s:unite_settings()
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Omnifunc
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -395,7 +386,7 @@ set t_Co=16
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " map for ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack
 nnoremap <leader>s :GitGrep 
 nnoremap <leader>v :TagbarToggle<cr>
 
@@ -442,6 +433,14 @@ function! s:goyo_after()
 endfunction
 
 let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
+
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|vendor\/bundle$\|node_modules$',
+  \ 'file': '\.exe$\|\.so$\|\.dll$',
+  \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Display after bundles

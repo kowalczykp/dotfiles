@@ -19,7 +19,7 @@ alias gr='git r'
 alias dotgit='GIT_DIR=~/dotfiles/.git GIT_WORK_TREE=~/dotfiles git'
 
 alias be='bundle exec'
-alias m="make -f $([ -e Makefile.dev ] && echo 'Makefile.dev' || echo 'Makefile')"
+alias m='make -f $([ -e Makefile.dev ] && echo Makefile.dev || echo Makefile)'
 complete -o default -o nospace -F _make m
 alias jr='jruby -S'
 alias bl='set_bundle_gemfile'

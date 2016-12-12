@@ -152,6 +152,7 @@ install font-fontawesome
 install xquartz
 install java
 install deluge
+install keybase
 
 # brew cask install paparazzi
 # brew cask install appcleaner

@@ -118,6 +118,10 @@ brew install ghostscript
 brew install octave --with-x11
 brew install fltk
 
+brew install homebrew/fuse/sshfs
+install osxfuse
+install macfusion
+
 # Applications
 install vagrant
 install virtualbox

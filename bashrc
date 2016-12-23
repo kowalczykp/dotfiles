@@ -12,16 +12,19 @@ set -o vi
 # this is for ansible to show running output
 export PYTHONUNBUFFERED=1
 
-export HISTCONTROL=ignoredups:ignorespace
-export HISTSIZE=1000
-export HISTFILESIZE=2000
+# history config
+shopt -s histappend
+shopt -s cmdhist
+HISTCONTROL=ignoredups:ignorespace
+HISTSIZE=10000
+HISTFILESIZE=-1
+HISTTIMEFORMAT='%F %T '
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 shopt -s checkwinsize
-shopt -s histappend
 shopt -s cdspell
 shopt -s globstar
 shopt -s checkjobs
-shopt -s cmdhist
 shopt -s extglob
 shopt -s autocd
 
@@ -49,7 +52,6 @@ fi
 if [ -f ~/dotfiles/liquidprompt/liquidprompt ]; then
   [[ $- = *i* ]] && source ~/dotfiles/liquidprompt/liquidprompt
 fi
-PROMPT_COMMAND="$PROMPT_COMMAND;set_bundle_gemfile"
 
 if [ -f ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark ]; then
   eval `dircolors ~/dotfiles/solarized/dircolors-solarized/dircolors.ansi-dark`

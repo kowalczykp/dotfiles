@@ -76,7 +76,8 @@ brew install valgrind
 brew install gcc
 brew install chruby
 brew install ruby-install
-brew install nodejs
+brew install node
+brew install watchman
 brew install go
 brew install bdw-gc gmp libevent libpcl libxml2 libyaml llvm
 brew link llvm --force

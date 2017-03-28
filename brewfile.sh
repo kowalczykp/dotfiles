@@ -103,7 +103,6 @@ brew install libvpx
 brew install ffmpeg --with-libvpx --with-theora --with-libvorbis --with-faac
 brew install ffmpeg2theora
 brew install ansible
-brew install syncthing
 brew install python
 brew install --HEAD xhyve
 brew install dnsmasq

@@ -43,7 +43,6 @@ brew install ghc cabal-install
 #install clamav
 #install ssh-copy-id
 #install s3cmd
-#install fdupes
 #install markdown
 #install duplicity
 #install gd
@@ -89,7 +88,7 @@ brew install ack
 brew install wget
 brew install ctags
 brew unlink ctags
-brew install htop
+brew install htop-osx
 brew install watch
 brew install vim
 brew install tmux
@@ -100,14 +99,14 @@ brew install tree
 brew install smartmontools
 brew install libvorbis
 brew install libvpx
-brew install libfaac
+# brew install libfaac
 brew install ffmpeg --with-libvpx --with-theora --with-libvorbis --with-faac
 brew install ffmpeg2theora
 brew install ansible
-brew install syncthing
 brew install python
 brew install --HEAD xhyve
 brew install dnsmasq
+brew install fdupes
 
 brew install --HEAD neovim
 brew install crystal-lang --with-llvm
@@ -141,7 +140,6 @@ install slack
 install mou
 install wkhtmltopdf
 install aerial
-install flux
 install recordit
 install clipgrab
 install omnidisksweeper

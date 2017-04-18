@@ -140,7 +140,6 @@ install slack
 install mou
 install wkhtmltopdf
 install aerial
-install flux
 install recordit
 install clipgrab
 install omnidisksweeper

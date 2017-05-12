@@ -235,42 +235,8 @@ nnoremap <leader>p :set paste!<cr>
 nnoremap <leader>q gqip
 nmap <leader>m :make<cr>:copen<cr>
 
-" Compatible with ranger 1.4.2 through 1.6.*
-"
-" Add ranger as a file chooser in vim
-"
-" If you add this code to the .vimrc, ranger can be started using the command
-" ":RangeChooser" or the keybinding "<leader>r".  Once you select one or more
-" files, press enter and ranger will quit again and vim will open the selected
-" files.
-
-function! RangeChooser()
-    let temp = tempname()
-    " The option "--choosefiles" was added in ranger 1.5.1. Use the next line
-    " with ranger 1.4.2 through 1.5.0 instead.
-    "exec 'silent !ranger --choosefile=' . shellescape(temp)
-    exec 'silent !ranger --choosefiles=' . shellescape(temp)
-    if !filereadable(temp)
-        redraw!
-        " Nothing to read.
-        return
-    endif
-    let names = readfile(temp)
-    if empty(names)
-        redraw!
-        " Nothing to open.
-        return
-    endif
-    " Edit the first item.
-    exec 'edit ' . fnameescape(names[0])
-    " Add any remaning items to the arg list/buffer list.
-    for name in names[1:]
-        exec 'argadd ' . fnameescape(name)
-    endfor
-    redraw!
-endfunction
-command! -bar RangerChooser call RangeChooser()
-nnoremap <leader>r :<C-U>RangerChooser<CR>
+let g:ranger_map_keys = 0
+map <leader>r :Ranger<CR>
 
 command! Docker let test#ruby#rspec#executable = 'docker-compose run '.fnamemodify(getcwd(), ':t').' bundle exec rspec'
 command! DockerLegacy let test#ruby#rspec#executable = 'docker-compose run '.fnamemodify(getcwd(), ':t').' bundle exec spec'

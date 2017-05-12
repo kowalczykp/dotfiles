@@ -190,3 +190,6 @@
 [submodule "vim/pack/plugins/start/ctrlp.vim"]
 	path = vim/pack/plugins/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim/pack/plugins/start/ranger.vim"]
+	path = vim/pack/plugins/start/ranger.vim
+	url = https://github.com/francoiscabrol/ranger.vim.git

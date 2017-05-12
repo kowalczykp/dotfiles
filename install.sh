@@ -62,7 +62,8 @@ for REPO in \
   plasticboy/vim-markdown \
   vim-pandoc/vim-pandoc \
   rhysd/vim-crystal \
-  jvirtanen/vim-octave
+  jvirtanen/vim-octave \
+  francoiscabrol/ranger.vim
 do
   PLUGIN=${REPO##*/}
   if [[ -a $PLUGINS/$PLUGIN ]] 
@@ -74,6 +75,7 @@ echo "Updating all submodules ..."
 git submodule update --remote --merge
 
 mkdir -p $HOME/.config
+mkdir -p $HOME/.config/ranger
 
 for FILE in vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore inputrc psqlrc jshintrc gemrc
 do
@@ -88,6 +90,14 @@ do
   if [ -a $HOME/.config/${FILE} ]
   then echo ".$FILE found, doing nothing"
   else ln -sf $DIR/$FILE $HOME/.config/$FILE && echo ".$FILE installed"
+  fi
+done
+
+for FILE in commands.py commands_full.py rc.conf rifle.conf scope.sh
+do
+  if [ -a $HOME/.config/ranger/${FILE} ]
+  then echo ".$FILE found, doing nothing"
+  else ln -sf $DIR/$FILE $HOME/.config/ranger/$FILE && echo ".$FILE installed"
   fi
 done
 

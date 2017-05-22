@@ -8,7 +8,6 @@ function install {
 brew tap homebrew/binary
 brew tap homebrew/versions
 brew tap neovim/homebrew-neovim
-brew tap manastech/crystal
 brew tap universal-ctags/universal-ctags
 brew tap homebrew/science
 brew tap buo/cask-upgrade
@@ -109,7 +108,6 @@ brew install dnsmasq
 brew install fdupes
 
 brew install --HEAD neovim
-brew install crystal-lang --with-llvm
 brew install --HEAD universal-ctags
 
 # Science
@@ -144,7 +142,6 @@ install recordit
 install clipgrab
 install omnidisksweeper
 install torbrowser
-install tagspaces
 install pgadmin3
 install avidemux
 install audacity

@@ -27,9 +27,13 @@ cask 'skype'
 cask 'vlc'
 cask 'sonos'
 cask 'shortcuts'
+cask 'zoomus'
+cask 'veertu-desktop'
+cask 'caffeine'
+cask 'pgadmin4'
 
 #mas 'Xcode', id: 497799835
-mas '1Password', id: 443987910 
+mas '1Password', id: 443987910
 mas 'Slack', id: 803453959
 mas 'Skeebus', id: 1035480615
 mas 'Moom', id: 419330170

@@ -27,7 +27,21 @@
   active = for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'
   alias = config --get-regexp alias
   sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+  forcepush = push --force-with-lease
   forcepull = "!git remote update -p; git reset --hard @{u}"
+
+  unstage  = reset HEAD --
+  uncommit = reset --soft HEAD^ --
+  unamend  = reset --soft HEAD@{1} --
+  # Mop all merged local branches
+  mop = !git branch --merged master | grep -v master | xargs -n 1 git branch -D
+  # Wipe all local branches apart from master
+  wipe = !git branch | grep -v master | xargs -n 1 git branch -D
+[fetch]
+  prune = true
+[pull]
+  ff = only
+  rebase = preserve
 [color]
   diff = auto
   status = auto
@@ -45,3 +59,11 @@
 [grep]
   extendregexp = true
   linenumber = true
+[branch]
+  autosetuprebase = always
+[rebase]
+  autosquash = true
+[commit]
+  gpgsign = true
+[gpg]
+  program = gpg2

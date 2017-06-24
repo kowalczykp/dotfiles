@@ -19,6 +19,7 @@ brew 'ranger'
 brew 'cowsay'
 brew 'tree'
 brew 'tig'
+#brew 'nodejs'
 
 cask 'iterm2'
 cask 'google-chrome'
@@ -31,6 +32,9 @@ cask 'zoomus'
 cask 'veertu-desktop'
 cask 'caffeine'
 cask 'pgadmin4'
+#cask 'duet'
+cask 'gpgtools'
+cask 'keybase'
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910
@@ -141,7 +145,6 @@ mas 'Be Focused Pro', id: 961632517
 #install viscosity
 #install sqlitebrowser
 #install evernote
-#install gpgtools
 #install mou
 #install wkhtmltopdf
 #install aerial
@@ -153,13 +156,11 @@ mas 'Be Focused Pro', id: 961632517
 #install avidemux
 #install audacity
 #install aegisub
-#install duet
 #install mactex
 #install font-fontawesome
 #install xquartz
 #install java
 #install deluge
-#install keybase
 
 # brew cask install paparazzi
 # brew cask install appcleaner

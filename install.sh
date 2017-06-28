@@ -57,6 +57,7 @@ for REPO in \
   othree/html5.vim \
   kchmck/vim-coffee-script \
   nono/vim-handlebars \
+  slim-template/vim-slim \
   fatih/vim-go \
   chrisbra/csv.vim \
   plasticboy/vim-markdown \
@@ -66,9 +67,9 @@ for REPO in \
   francoiscabrol/ranger.vim
 do
   PLUGIN=${REPO##*/}
-  if [[ -a $PLUGINS/$PLUGIN ]] 
+  if [[ -a $PLUGINS$PLUGIN ]] 
   then echo "$PLUGIN found"
-  else git submodule add https://github.com/$REPO.git $PLUGINS/$PLUGIN
+  else git submodule add https://github.com/$REPO.git $PLUGINS$PLUGIN
   fi
 done
 

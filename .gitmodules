@@ -193,3 +193,6 @@
 [submodule "vim/pack/plugins/start/ranger.vim"]
 	path = vim/pack/plugins/start/ranger.vim
 	url = https://github.com/francoiscabrol/ranger.vim.git
+[submodule "vim/pack/plugins/start/vim-slim"]
+	path = vim/pack/plugins/start/vim-slim
+	url = https://github.com/slim-template/vim-slim.git

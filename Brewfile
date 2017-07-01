@@ -32,9 +32,10 @@ cask 'zoomus'
 cask 'veertu-desktop'
 cask 'caffeine'
 cask 'pgadmin4'
-#cask 'duet'
+cask 'duet'
 cask 'gpgtools'
 cask 'keybase'
+cask 'dropbox'
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910
@@ -171,7 +172,6 @@ mas 'Be Focused Pro', id: 961632517
 # brew cask install google-drive
 # brew cask install calibre
 # brew cask install musicbrainz-picard
-# brew cask install dropbox
 #cask install plex
 #cask install unison-usenet
 #cask install adium

@@ -239,7 +239,6 @@ let g:ranger_map_keys = 0
 map <leader>r :Ranger<CR>
 
 command! Docker let test#ruby#rspec#executable = 'docker-compose run '.fnamemodify(getcwd(), ':t').' bundle exec rspec'
-command! DockerLegacy let test#ruby#rspec#executable = 'docker-compose run '.fnamemodify(getcwd(), ':t').' bundle exec spec'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unused mappings ATM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

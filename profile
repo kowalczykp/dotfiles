@@ -6,6 +6,10 @@ if [ -d "$HOME/dotfiles/bin" ] ; then
   PATH="$HOME/dotfiles/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
 if [ -s "$HOME/.rvm/scripts/rvm" ] ; then
   source "$HOME/.rvm/scripts/rvm"
 fi

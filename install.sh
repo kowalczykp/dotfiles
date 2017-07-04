@@ -57,6 +57,7 @@ for REPO in \
   othree/html5.vim \
   kchmck/vim-coffee-script \
   nono/vim-handlebars \
+  slim-template/vim-slim \
   fatih/vim-go \
   chrisbra/csv.vim \
   plasticboy/vim-markdown \
@@ -66,13 +67,11 @@ for REPO in \
   francoiscabrol/ranger.vim
 do
   PLUGIN=${REPO##*/}
-  if [[ -a $PLUGINS/$PLUGIN ]] 
+  if [[ -a $PLUGINS$PLUGIN ]] 
   then echo "$PLUGIN found"
-  else git submodule add https://github.com/$REPO.git $PLUGINS/$PLUGIN
+  else git submodule add https://github.com/$REPO.git $PLUGINS$PLUGIN
   fi
 done
-echo "Updating all submodules ..."
-git submodule update --remote --merge
 
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/ranger
@@ -120,13 +119,19 @@ else
   else github=$GITHUB
   fi
 
+  if [[ -z "$GPGKEY" ]]
+  then read -p "GPG key" gpgkey
+  else gpgkey=$GPGKEY
+  fi
+
   # escape strings for sed
   name=$(printf "%s\n" "$name" | sed 's/[\&/]/\\&/g')
   email=$(printf "%s\n" "$email" | sed 's/[\&/]/\\&/g')
   github=$(printf "%s\n" "$github" | sed 's/[\&/]/\\&/g')
   home=$(printf "%s\n" "$HOME" | sed 's/[\&/]/\\&/g')
+  gpgkey=$(printf "%s\n" "$gpgkey" | sed 's/[\&/]/\\&/g')
 
   # replace NAME, EMAIL, GITHUB, HOME
-  sed "s/NAME/$name/g" $DIR/gitconfig | sed "s/EMAIL/$email/g" | sed "s/GITHUB/$github/g" | sed "s/HOME/$home/g" > $HOME/.gitconfig
+  sed "s/NAME/$name/g" $DIR/gitconfig | sed "s/EMAIL/$email/g" | sed "s/GPGKEY/$gpgkey/g" | sed "s/GITHUB/$github/g" | sed "s/HOME/$home/g" > $HOME/.gitconfig
   echo ".gitconfig installed"
 fi

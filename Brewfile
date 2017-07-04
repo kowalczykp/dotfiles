@@ -19,6 +19,7 @@ brew 'ranger'
 brew 'cowsay'
 brew 'tree'
 brew 'tig'
+brew 'rename'
 #brew 'nodejs'
 
 cask 'iterm2'

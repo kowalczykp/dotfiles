@@ -37,6 +37,7 @@ cask 'duet'
 cask 'gpgtools'
 cask 'keybase'
 cask 'dropbox'
+cask 'quik'
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910

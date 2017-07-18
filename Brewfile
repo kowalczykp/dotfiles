@@ -38,6 +38,7 @@ cask 'gpgtools'
 cask 'keybase'
 cask 'dropbox'
 cask 'quik'
+cask 'screenhero'
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910
@@ -46,6 +47,7 @@ mas 'Skeebus', id: 1035480615
 mas 'Moom', id: 419330170
 mas 'Pocket', id: 568494494
 mas 'Be Focused Pro', id: 961632517
+mas 'MediaInfo', id: 510620098
 
 #brew tap homebrew/binary
 #brew tap homebrew/versions

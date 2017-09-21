@@ -20,6 +20,7 @@ brew 'cowsay'
 brew 'tree'
 brew 'tig'
 brew 'rename'
+brew 'p7zip'
 #brew 'nodejs'
 
 cask 'iterm2'
@@ -39,6 +40,8 @@ cask 'keybase'
 cask 'dropbox'
 cask 'quik'
 cask 'screenhero'
+cask 'arq'
+cask 'vmware-fusion'
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910
@@ -48,6 +51,7 @@ mas 'Moom', id: 419330170
 mas 'Pocket', id: 568494494
 mas 'Be Focused Pro', id: 961632517
 mas 'MediaInfo', id: 510620098
+mas 'Bear', id: 1091189122
 
 #brew tap homebrew/binary
 #brew tap homebrew/versions
@@ -144,7 +148,6 @@ mas 'MediaInfo', id: 510620098
 
 # Applications
 #install vagrant
-#install virtualbox
 #install sequel-pro
 #install flash-player
 #install viscosity

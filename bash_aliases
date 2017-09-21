@@ -8,6 +8,7 @@ alias ed='ed -p "ed> "'
 alias cd..='cd ..'
 alias j='jobs -l'
 alias gpg='gpg2'
+alias dc='docker-compose'
 
 # git
 alias g='git'

@@ -26,6 +26,7 @@ for REPO in \
   tpope/vim-classpath \
   tpope/vim-tbone \
   tpope/vim-dispatch \
+  tpope/vim-vinegar \
   jeetsukumaran/vim-buffergator \
   scrooloose/syntastic \
   mileszs/ack.vim \
@@ -56,6 +57,7 @@ for REPO in \
   groenewege/vim-less \
   othree/html5.vim \
   kchmck/vim-coffee-script \
+  leafgarland/typescript-vim \
   nono/vim-handlebars \
   slim-template/vim-slim \
   fatih/vim-go \

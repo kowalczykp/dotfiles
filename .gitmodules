@@ -196,3 +196,9 @@
 [submodule "vim/pack/plugins/start/vim-slim"]
 	path = vim/pack/plugins/start/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
+[submodule "vim/pack/plugins/start/typescript-vim"]
+	path = vim/pack/plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/pack/plugins/start/vim-vinegar"]
+	path = vim/pack/plugins/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git

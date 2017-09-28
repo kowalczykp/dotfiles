@@ -4,7 +4,7 @@ alias ll="ls -lv --group-directories-first"
 alias la='ll -A'
 
 command -v ack >/dev/null 2>&1 || { alias ack="ack-grep"; }
-alias ed='ed -p "ed> "'
+alias ed='editor'
 alias cd..='cd ..'
 alias j='jobs -l'
 alias gpg='gpg2'

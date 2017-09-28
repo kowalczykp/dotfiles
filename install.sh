@@ -1,7 +1,7 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-PLUGINS="vim/pack/plugins/start/"
+PLUGINS="nvim/pack/plugins/start/"
 git submodule init
 for REPO in \
   tpope/vim-sensible \
@@ -27,25 +27,42 @@ for REPO in \
   tpope/vim-tbone \
   tpope/vim-dispatch \
   tpope/vim-vinegar \
+  icymind/NeoSolarized \
+  vim-airline/vim-airline \
+  vim-airline/vim-airline-themes \
+  ctrlpvim/ctrlp.vim \
+  airblade/vim-gitgutter \
+  janko-m/vim-test \
+  airodactyl/neovim-ranger \
+  roxma/vim-tmux-clipboard \
+  neomake/neomake \
+  mhinz/vim-grepper \
+  Shougo/deoplete.nvim \
+  Shougo/neco-syntax \
+  ervandew/supertab
+do
+  PLUGIN=${REPO##*/}
+  if [[ -a $PLUGINS$PLUGIN ]] 
+  then echo "$PLUGIN found"
+  else git submodule add https://github.com/$REPO.git $PLUGINS$PLUGIN
+  fi
+done
+
+PLUGINS="vim/pack/plugins/start/"
+git submodule init
+for REPO in \
   jeetsukumaran/vim-buffergator \
   scrooloose/syntastic \
   mileszs/ack.vim \
   kana/vim-textobj-user \
   junegunn/vim-easy-align \
   andrewradev/switch.vim \
-  airblade/vim-gitgutter \
-  vim-airline/vim-airline \
-  vim-airline/vim-airline-themes \
   tjennings/git-grep-vim \
-  ervandew/supertab \
   vim-scripts/DirDiff.vim \
   junegunn/goyo.vim \
   majutsushi/tagbar \
   schickling/vim-bufonly \
   kana/vim-textobj-indent \
-  janko-m/vim-test \
-  altercation/vim-colors-solarized \
-  ctrlpvim/ctrlp.vim \
   vim-ruby/vim-ruby \
   nelstrom/vim-textobj-rubyblock \
   ecomba/vim-ruby-refactoring \
@@ -65,8 +82,7 @@ for REPO in \
   plasticboy/vim-markdown \
   vim-pandoc/vim-pandoc \
   rhysd/vim-crystal \
-  jvirtanen/vim-octave \
-  francoiscabrol/ranger.vim
+  jvirtanen/vim-octave
 do
   PLUGIN=${REPO##*/}
   if [[ -a $PLUGINS$PLUGIN ]] 
@@ -74,9 +90,6 @@ do
   else git submodule add https://github.com/$REPO.git $PLUGINS$PLUGIN
   fi
 done
-
-mkdir -p $HOME/.config
-mkdir -p $HOME/.config/ranger
 
 for FILE in vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore inputrc psqlrc jshintrc gemrc
 do
@@ -86,19 +99,23 @@ do
   fi
 done
 
-for FILE in liquidpromptrc
+mkdir -p $HOME/.config
+
+for FILE in liquidpromptrc nvim
 do
   if [ -a $HOME/.config/${FILE} ]
-  then echo ".$FILE found, doing nothing"
-  else ln -sf $DIR/$FILE $HOME/.config/$FILE && echo ".$FILE installed"
+  then echo "$FILE found, doing nothing"
+  else ln -sf $DIR/$FILE $HOME/.config/$FILE && echo "$FILE installed"
   fi
 done
+
+mkdir -p $HOME/.config/ranger
 
 for FILE in commands.py commands_full.py rc.conf rifle.conf scope.sh
 do
   if [ -a $HOME/.config/ranger/${FILE} ]
-  then echo ".$FILE found, doing nothing"
-  else ln -sf $DIR/$FILE $HOME/.config/ranger/$FILE && echo ".$FILE installed"
+  then echo "$FILE found, doing nothing"
+  else ln -sf $DIR/$FILE $HOME/.config/ranger/$FILE && echo "$FILE installed"
   fi
 done
 

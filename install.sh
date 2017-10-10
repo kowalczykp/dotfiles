@@ -42,7 +42,7 @@ for REPO in \
   ervandew/supertab
 do
   PLUGIN=${REPO##*/}
-  if [[ -a $PLUGINS$PLUGIN ]] 
+  if [[ -a $PLUGINS$PLUGIN ]]
   then echo "$PLUGIN found"
   else git submodule add https://github.com/$REPO.git $PLUGINS$PLUGIN
   fi
@@ -51,41 +51,24 @@ done
 PLUGINS="vim/pack/plugins/start/"
 git submodule init
 for REPO in \
-  jeetsukumaran/vim-buffergator \
-  scrooloose/syntastic \
-  mileszs/ack.vim \
-  kana/vim-textobj-user \
-  junegunn/vim-easy-align \
-  andrewradev/switch.vim \
-  tjennings/git-grep-vim \
-  vim-scripts/DirDiff.vim \
-  junegunn/goyo.vim \
-  majutsushi/tagbar \
-  schickling/vim-bufonly \
-  kana/vim-textobj-indent \
-  vim-ruby/vim-ruby \
-  nelstrom/vim-textobj-rubyblock \
-  ecomba/vim-ruby-refactoring \
-  danchoi/ri.vim \
-  mattn/emmet-vim \
-  ekalinin/Dockerfile.vim \
-  pangloss/vim-javascript \
-  cakebaker/scss-syntax.vim \
-  groenewege/vim-less \
-  othree/html5.vim \
-  kchmck/vim-coffee-script \
-  leafgarland/typescript-vim \
-  nono/vim-handlebars \
-  slim-template/vim-slim \
-  fatih/vim-go \
-  chrisbra/csv.vim \
-  plasticboy/vim-markdown \
-  vim-pandoc/vim-pandoc \
-  rhysd/vim-crystal \
-  jvirtanen/vim-octave
+  tpope/vim-sensible \
+  tpope/vim-sleuth \
+  tpope/vim-eunuch \
+  tpope/vim-unimpaired \
+  tpope/vim-abolish \
+  tpope/vim-commentary \
+  tpope/vim-repeat \
+  tpope/vim-surround \
+  tpope/vim-endwise \
+  tpope/vim-ragtag \
+  tpope/vim-fireplace \
+  tpope/vim-tbone \
+  tpope/vim-dispatch \
+  tpope/vim-vinegar \
+  ervandew/supertab
 do
   PLUGIN=${REPO##*/}
-  if [[ -a $PLUGINS$PLUGIN ]] 
+  if [[ -a $PLUGINS$PLUGIN ]]
   then echo "$PLUGIN found"
   else git submodule add https://github.com/$REPO.git $PLUGINS$PLUGIN
   fi

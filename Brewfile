@@ -21,7 +21,10 @@ brew 'tree'
 brew 'tig'
 brew 'rename'
 brew 'p7zip'
+brew 'kubernetes-cli'
+brew 'unrar'
 #brew 'nodejs'
+brew 'neovim'
 
 cask 'iterm2'
 cask 'google-chrome'
@@ -42,6 +45,9 @@ cask 'quik'
 cask 'screenhero'
 cask 'arq'
 cask 'vmware-fusion'
+cask 'calibre'
+cask 'minikube'
+cask 'viscosity'
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910
@@ -92,7 +98,6 @@ mas 'Bear', id: 1091189122
 #install reattach-to-user-namespace
 #install id3tool
 #install imagemagick
-#install unrar
 #install libdvdcss
 #install dos2unix
 #install nmap
@@ -150,7 +155,6 @@ mas 'Bear', id: 1091189122
 #install vagrant
 #install sequel-pro
 #install flash-player
-#install viscosity
 #install sqlitebrowser
 #install evernote
 #install mou
@@ -177,7 +181,6 @@ mas 'Bear', id: 1091189122
 # brew cask install tinkertool
 # brew cask install intel-power-gadget
 # brew cask install google-drive
-# brew cask install calibre
 # brew cask install musicbrainz-picard
 #cask install plex
 #cask install unison-usenet

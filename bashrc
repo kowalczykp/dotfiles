@@ -6,6 +6,7 @@ umask 0022
 # after this line is for interactive only
 
 export EDITOR="vim"
+# export TERM=screen-256color
 export TERM=xterm-256color
 set -o vi
 

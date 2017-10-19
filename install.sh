@@ -35,10 +35,11 @@ for REPO in \
   janko-m/vim-test \
   airodactyl/neovim-ranger \
   roxma/vim-tmux-clipboard \
-  neomake/neomake \
+  w0rp/ale \
   mhinz/vim-grepper \
   Shougo/deoplete.nvim \
   Shougo/neco-syntax \
+  sheerun/vim-polyglot \
   ervandew/supertab
 do
   PLUGIN=${REPO##*/}

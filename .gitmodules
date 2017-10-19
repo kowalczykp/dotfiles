@@ -82,9 +82,6 @@
 [submodule "nvim/pack/plugins/start/vim-tmux-clipboard"]
 	path = nvim/pack/plugins/start/vim-tmux-clipboard
 	url = https://github.com/roxma/vim-tmux-clipboard.git
-[submodule "nvim/pack/plugins/start/neomake"]
-	path = nvim/pack/plugins/start/neomake
-	url = https://github.com/neomake/neomake.git
 [submodule "nvim/pack/plugins/start/vim-grepper"]
 	path = nvim/pack/plugins/start/vim-grepper
 	url = https://github.com/mhinz/vim-grepper.git
@@ -166,3 +163,9 @@
 [submodule "nvim/pack/plugins/start/vim-vinegar"]
 	path = nvim/pack/plugins/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule "nvim/pack/plugins/start/ale"]
+	path = nvim/pack/plugins/start/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "nvim/pack/plugins/start/vim-polyglot"]
+	path = nvim/pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git

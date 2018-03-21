@@ -25,6 +25,7 @@ brew 'kubernetes-cli'
 brew 'unrar'
 #brew 'nodejs'
 brew 'neovim'
+brew 'yubikey-personalization'
 
 cask 'iterm2'
 cask 'google-chrome'
@@ -42,12 +43,14 @@ cask 'gpgtools'
 cask 'keybase'
 cask 'dropbox'
 cask 'quik'
-cask 'screenhero'
 cask 'arq'
-cask 'vmware-fusion'
+#cask 'vmware-fusion'
 cask 'calibre'
 cask 'minikube'
 cask 'viscosity'
+cask 'little-snitch'
+cask 'micro-snitch'
+
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910

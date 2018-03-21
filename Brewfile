@@ -50,6 +50,7 @@ cask 'minikube'
 cask 'viscosity'
 cask 'little-snitch'
 cask 'micro-snitch'
+cask 'daisydisk'
 
 
 #mas 'Xcode', id: 497799835
@@ -179,7 +180,6 @@ mas 'Bear', id: 1091189122
 
 # brew cask install paparazzi
 # brew cask install appcleaner
-# brew cask install daisydisk
 # brew cask install disk-inventory-x
 # brew cask install tinkertool
 # brew cask install intel-power-gadget

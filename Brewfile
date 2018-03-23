@@ -51,6 +51,7 @@ cask 'viscosity'
 cask 'little-snitch'
 cask 'micro-snitch'
 cask 'daisydisk'
+cask 'google-featured-photos'
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910

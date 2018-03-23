@@ -25,6 +25,7 @@ brew 'unrar'
 #brew 'nodejs'
 brew 'neovim'
 brew 'yubikey-personalization'
+brew 'doctl'
 
 cask 'iterm2'
 cask 'calibre'

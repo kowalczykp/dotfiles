@@ -3,7 +3,6 @@ alias ls="ls --color=auto -Fh"
 alias ll="ls -lv --group-directories-first"
 alias la='ll -A'
 
-command -v ack >/dev/null 2>&1 || { alias ack="ack-grep"; }
 alias ed='editor'
 alias cd..='cd ..'
 alias j='jobs -l'

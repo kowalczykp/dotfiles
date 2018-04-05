@@ -26,6 +26,7 @@ brew 'unrar'
 brew 'neovim'
 brew 'yubikey-personalization'
 brew 'doctl'
+brew 'jq'
 
 cask 'iterm2'
 cask 'calibre'

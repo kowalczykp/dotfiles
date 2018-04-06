@@ -27,6 +27,7 @@ brew 'neovim'
 brew 'yubikey-personalization'
 brew 'doctl'
 brew 'jq'
+brew 'coreos-ct'
 
 cask 'iterm2'
 cask 'calibre'
@@ -190,4 +191,3 @@ mas 'Bear', id: 1091189122
 #cask install unison-usenet
 #cask install adium
 #cask install git-annex
-

@@ -28,6 +28,7 @@ brew 'yubikey-personalization'
 brew 'doctl'
 brew 'jq'
 brew 'coreos-ct'
+brew 'terraform'
 
 cask 'iterm2'
 cask 'calibre'

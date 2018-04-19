@@ -18,10 +18,6 @@ if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
 
-if command -v keychain >/dev/null 2>&1; then
-  keychain
-fi
-
 if [ -n "$BASH_VERSION" ]; then
   if [ -f "$HOME/.bashrc" ]; then
     source "$HOME/.bashrc"

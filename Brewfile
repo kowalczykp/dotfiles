@@ -27,8 +27,8 @@ brew 'neovim'
 brew 'yubikey-personalization'
 brew 'doctl'
 brew 'jq'
-brew 'coreos-ct'
 brew 'terraform'
+brew 'sdl2' # for gosu with kids
 
 cask 'iterm2'
 cask 'calibre'

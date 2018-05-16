@@ -29,6 +29,7 @@ brew 'doctl'
 brew 'jq'
 brew 'terraform'
 brew 'sdl2' # for gosu with kids
+brew 'kubernetes-helm'
 
 cask 'iterm2'
 cask 'calibre'
@@ -55,6 +56,8 @@ cask 'little-snitch'
 cask 'micro-snitch'
 cask 'daisydisk'
 cask 'google-featured-photos'
+cask 'gmvault'
+cask 'lastpass'
 
 #mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910

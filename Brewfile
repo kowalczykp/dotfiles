@@ -60,7 +60,7 @@ cask 'gmvault'
 cask 'lastpass'
 
 #mas 'Xcode', id: 497799835
-mas '1Password', id: 443987910
+mas '1Password 7', id: 1333542190
 mas 'Slack', id: 803453959
 mas 'Skeebus', id: 1035480615
 mas 'Moom', id: 419330170

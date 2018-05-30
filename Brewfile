@@ -68,6 +68,7 @@ mas 'Pocket', id: 568494494
 mas 'Be Focused Pro', id: 961632517
 mas 'MediaInfo', id: 510620098
 mas 'Bear', id: 1091189122
+mas 'Tweetbot', id: 1384080005
 
 #brew tap homebrew/binary
 #brew tap homebrew/versions

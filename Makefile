@@ -4,4 +4,5 @@ LINKS = vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore inputrc 
 install: $(addprefix ~/.,$(LINKS))
 
 $(addprefix ~/.,$(LINKS)):
+	mkdir -p $(@D)
 	ln -sf $(CURDIR)/$(@F:.%=%) $@

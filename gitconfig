@@ -1,7 +1,7 @@
 [user]
-  name = NAME
-  email = EMAIL
-  signingkey = GPGKEY
+  name = $NAME
+  email = $EMAIL
+  signingkey = $GPGKEY
 [alias]
   f = fetch -p --all
   r = remote -v
@@ -48,13 +48,13 @@
   status = auto
   branch = auto
 [core]
-  excludesfile = HOME/.gitignore
+  excludesfile = $HOME/.gitignore
   autocrlf = input
   editor = vim
 [format]
   pretty = %C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]
 [github]
-  user = GITHUB
+  user = $GITHUB
 [push]
   default = simple
 [grep]

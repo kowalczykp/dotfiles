@@ -2,11 +2,11 @@ LINKS = vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore inputrc 
 ENVSUBST = $(shell which envsubst || (find /usr/local -name envsubst | head -n 1))
 
 .PHONY: install
-install: $(addprefix ~/.,$(LINKS)) ~/.gitconfig
+install: backup $(addprefix ~/.,$(LINKS)) ~/.gitconfig
 
 $(addprefix ~/.,$(LINKS)):
 	@mkdir -p $(@D)
-	ln -sf $(CURDIR)/$(@F:.%=%) $@
+	ln -s $(CURDIR)/$(@F:.%=%) $@
 
 ~/.gitconfig:
 ifndef NAME
@@ -24,4 +24,10 @@ endif
 ifndef HOME
 	$(error HOME is undefined (your home dir path))
 endif
-	$(ENVSUBST) \$$NAME,\$$EMAIL,\$$GITHUB,\$$GPGKEY,\$$HOME < gitconfig > ~/.gitconfig
+	mv $@ $@~ 2>/dev/null || true
+	$(ENVSUBST) \$$NAME,\$$EMAIL,\$$GITHUB,\$$GPGKEY,\$$HOME < $(@F:.%=%) > $@
+
+backup: $(addprefix ~/.,$(addsuffix ~,$(LINKS)))
+
+$(addprefix ~/.,$(addsuffix ~,$(LINKS))):
+	[ -L $(@:%~=%) ] || (mv $(@:%~=%) $@ 2>/dev/null) || true

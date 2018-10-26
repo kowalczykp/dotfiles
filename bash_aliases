@@ -6,7 +6,6 @@ alias la='ll -A'
 alias ed='editor'
 alias cd..='cd ..'
 alias j='jobs -l'
-alias gpg='gpg2'
 alias dc='docker-compose'
 
 # git

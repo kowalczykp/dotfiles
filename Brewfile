@@ -32,6 +32,7 @@ brew 'kubernetes-helm'
 brew 'prometheus'
 brew 'node_exporter'
 brew 'moreutils'
+brew 'gnupg'
 
 cask 'iterm2'
 cask 'calibre'
@@ -44,7 +45,6 @@ cask 'zoomus'
 cask 'caffeine'
 #cask 'pgadmin4'
 #cask 'duet'
-cask 'gpgtools'
 cask 'keybase'
 cask 'dropbox'
 #cask 'quik'
@@ -61,6 +61,8 @@ cask 'gmvault'
 cask 'lastpass'
 cask 'alfred'
 cask 'turbo-boost-switcher'
+#cask 'xquartz'
+#cask 'x2goclient'
 
 #mas 'Xcode', id: 497799835
 mas '1Password 7', id: 1333542190
@@ -184,7 +186,6 @@ mas 'Tweetbot', id: 1384080005
 #install aegisub
 #install mactex
 #install font-fontawesome
-#install xquartz
 #install java
 #install deluge
 

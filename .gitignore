@@ -2,3 +2,4 @@ vim/.netrwhist
 vim/bundle
 nvim/.netrwhist
 vim/plugged
+.DS_Store

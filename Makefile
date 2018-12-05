@@ -1,5 +1,6 @@
 LINKS = vimrc tmux.conf bash_profile bashrc profile ackrc vim gitignore inputrc psqlrc jshintrc gemrc config/liquidpromptrc config/nvim config/ranger/commands.py config/ranger/commands_full.py config/ranger/rc.conf config/ranger/rifle.conf config/ranger/scope.sh
 ENVSUBST = $(shell which envsubst || (find /usr/local -name envsubst | head -n 1))
+HOSTNAME = $(shell hostname -s)
 
 .PHONY: install
 install: backup $(addprefix ~/.,$(LINKS)) ~/.gitconfig
@@ -31,3 +32,11 @@ backup: $(addprefix ~/.,$(addsuffix ~,$(LINKS)))
 
 $(addprefix ~/.,$(addsuffix ~,$(LINKS))):
 	[ -L $(@:%~=%) ] || (mv $(@:%~=%) $@ 2>/dev/null) || true
+
+brew:
+	brew update
+	brew upgrade
+	brew bundle install --file=Brewfile.$(HOSTNAME)
+	brew bundle cleanup --file=Brewfile.$(HOSTNAME)
+	brew cleanup
+	mas upgrade
